@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-size: clamp(12px, 2.25vw, 16px);
+  --bdazzled-blue: #3d5a80;
+  --burnt-sienna: #ef6e4e;
+  --dark-grey: hsl(218, 23%, 30%);
+  --gunmetal: hsl(218, 23%, 21%);
+  --honey-yellow: #ffb20f;
+  --light-cyan: #e0fbfc;
+  --light-grey: #dddddd;
+  --may-green: #618b4a;
+  --pale-cerulean: #98c1d9;
+}
+
+body {
+  font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--background);
+  margin: 2rem 0;
+}
+
+.theme-light {
+  --background: var(--light-grey);
+  --light: var(--light-cyan);
+  --dark: var(--bdazzled-blue);
+  --primary: var(--pale-cerulean);
+  /* --accent: var(--burnt-sienna); */
+  --accent: var(--may-green);
+  --highlight: var(--honey-yellow);
+  --black: var(--gunmetal);
+  --inactive: var(--dark-grey);
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.month-container {
+  display: grid;
+  align-content: stretch;
+  gap: 1px;
+  border: 1px solid black;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 2em 2em auto;
+  background-color: black;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.41); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.month-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 7;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 0.5em;
+}
+
+.day-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: var(--black);
+  color: var(--light);
+  padding: 0.5em;
+}
+
+.day {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--primary);
+  padding: 0.3em 0.3em 1em 0.5em;
+}
+
+.accent {
+  background: var(--accent);
+}
+
+.highlight {
+  background: var(--highlight);
+}
+
+.inactive {
+  background: var(--inactive);
+}
