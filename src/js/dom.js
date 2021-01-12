@@ -6,6 +6,9 @@
 export function createDiv(content, classNames) {
   const div = document.createElement("div");
   div.textContent = content;
-  classNames.split(" ").forEach(c => div.classList.add(c));
+  classNames.split(" ").forEach(c => {
+    // Ignore extra whitespace
+    if (c) div.classList.add(c);
+  });
   return div;
 }
