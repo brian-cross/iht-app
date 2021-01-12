@@ -32,7 +32,7 @@ export function monthContainer(year, month, week = 1) {
   const monthContainer = createDiv("", "month-container");
 
   // Month heading
-  monthContainer.appendChild(monthHeading(month));
+  monthContainer.appendChild(monthHeading(year, month, week));
 
   // Day heading cells
   dayHeadings.forEach(heading => {
@@ -77,15 +77,16 @@ export function dayCell(dayNumber, type = 0) {
 
   switch (type) {
     case 0:
+      className = "day day-off";
       break;
     case 1:
-      className = "day accent";
+      className = "day weekday-shift";
       break;
     case 2:
-      className = "day highlight";
+      className = "day weekend-shift";
       break;
     default:
-      break;
+      throw new Error("Invalid day type. Must be 0, 1 or 2.");
   }
 
   return createDiv(dayNumber, className);
@@ -99,11 +100,24 @@ export function paddingCell() {
 }
 
 /**
- * Creates a heading with the name of the month
+ * Creates a heading with the year, month and week of the rotation
+ * @param {number} year - 4 digit year
  * @param {string} month - Name of the month
+ * @param {number} week - Schedule rotation week (1 2 3 or 4)
  */
-export function monthHeading(month) {
-  return createDiv(month, "month-heading");
+export function monthHeading(year, month, week) {
+  const container = document.createElement("div");
+  container.classList.add("month-heading");
+  const yearSpan = document.createElement("span");
+  const monthSpan = document.createElement("span");
+  const weekSpan = document.createElement("span");
+  yearSpan.textContent = year;
+  monthSpan.textContent = month;
+  weekSpan.textContent = `W${week}`;
+  container.appendChild(yearSpan);
+  container.appendChild(monthSpan);
+  container.appendChild(weekSpan);
+  return container;
 }
 
 /**
