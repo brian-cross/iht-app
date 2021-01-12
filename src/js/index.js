@@ -1,8 +1,40 @@
 import months from "./months";
 import { monthContainer } from "./calendar";
+import { createDiv } from "./dom";
+import "./scroll";
 
-// Grab the div where we will render the calendar
-const container = document.querySelector(".page-container");
+let currentWeek = 1;
+let currentYear = new Date().getFullYear();
 
-// Render the calendar for each month
-months.forEach(month => container.appendChild(monthContainer(2021, month, 3)));
+// Mobile menu button handler
+const hamburger = document.querySelector(".hamburger");
+const mainMenu = document.querySelector(".main-menu");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  mainMenu.classList.toggle("open");
+});
+
+// Nav link handlers
+const navLinks = document.querySelectorAll(".main-menu div");
+navLinks.forEach(navLink => {
+  console.log(navLink.dataset.week);
+  navLink.addEventListener("click", e => {
+    currentWeek = Number(e.currentTarget.dataset.week);
+    renderCalendar(currentYear, currentWeek);
+  });
+});
+
+// Create a container to hold the calendar
+const calendarContainer = createDiv("", "calendar-container");
+document.querySelector(".page-container").appendChild(calendarContainer);
+
+// Render the calendar after removing any existing calendar
+function renderCalendar(year, week) {
+  while (calendarContainer.firstChild)
+    calendarContainer.removeChild(calendarContainer.firstChild);
+  months.forEach(month =>
+    calendarContainer.appendChild(monthContainer(year, month, week))
+  );
+}
+
+renderCalendar(currentYear, currentWeek);

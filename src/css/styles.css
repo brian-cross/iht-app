@@ -1,5 +1,12 @@
+/******************************************************************************
+* Import fonts
+******************************************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
+/******************************************************************************
+* Global styles, colors, typography
+******************************************************************************/
 *,
 ::before,
 ::after {
@@ -16,15 +23,8 @@
   --pale-cerulean: #98c1d9;
 }
 
-body {
-  font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: var(--background);
-  margin: 2rem 0;
-}
-
 .theme-light {
-  --background: var(--light-grey);
+  --background: white;
   --light: var(--light-cyan);
   --dark: var(--bdazzled-blue);
   --primary: var(--pale-cerulean);
@@ -35,14 +35,164 @@ body {
   --inactive: var(--dark-grey);
 }
 
+body,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--background);
+}
+
+h1,
+li {
+  font-family: Montserrat, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/******************************************************************************
+* Page header
+******************************************************************************/
+header {
+  --main-header-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  color: var(--dark);
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: var(--main-header-height);
+  transition: top 250ms ease-in-out;
+}
+
+header.hidden {
+  top: -4rem;
+}
+
+/******************************************************************************
+* Nav and hamburger menu
+******************************************************************************/
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 70rem;
+}
+
+.hamburger {
+  position: relative;
+  width: 3em;
+  height: 1.5em;
+  --bar-height: 2px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: var(--bar-height);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: var(--dark);
+}
+
+.hamburger span {
+  transition: 125ms ease-in-out;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+  bottom: 50%;
+  right: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.hamburger span:last-child {
+  bottom: 0;
+}
+
+.hamburger.open span:first-child,
+.hamburger.open span:last-child {
+  width: 0%;
+}
+
+.hamburger.open span:nth-child(2) {
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+/******************************************************************************
+* Main menu
+******************************************************************************/
+.main-menu {
+  position: absolute;
+  top: var(--main-header-height);
+  right: 0;
+  transform: translateX(100%);
+  z-index: 2;
+  list-style: none;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: 125ms ease-in-out;
+}
+
+.main-menu li {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.main-menu li:hover {
+  color: var(--primary);
+}
+
+.main-menu div {
+  padding: 0 1em;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.main-menu div + div {
+  border-top: 1px solid var(--primary);
+}
+
+.main-menu.open {
+  transform: translateX(0);
+}
+
+/******************************************************************************
+* Main content container
+******************************************************************************/
 .page-container {
+  width: 90%;
+  max-width: 70rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/******************************************************************************
+* Calendar styles
+******************************************************************************/
+.calendar-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   gap: 1rem;
-  width: 90%;
-  max-width: 70rem;
-  margin: 0 auto;
 }
 
 .month-container {
