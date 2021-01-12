@@ -17,10 +17,12 @@ hamburger.addEventListener("click", () => {
 // Nav link handlers
 const navLinks = document.querySelectorAll(".main-menu div");
 navLinks.forEach(navLink => {
-  console.log(navLink.dataset.week);
   navLink.addEventListener("click", e => {
     currentWeek = Number(e.currentTarget.dataset.week);
     renderCalendar(currentYear, currentWeek);
+    if (hamburger.classList.contains("open"))
+      hamburger.classList.remove("open");
+    if (mainMenu.classList.contains("open")) mainMenu.classList.remove("open");
   });
 });
 
