@@ -3,28 +3,47 @@ import { monthContainer } from "./calendar";
 import { createDiv } from "./dom";
 import "./scroll";
 
-let currentWeek = 1;
+if (!localStorage.getItem("week")) {
+  localStorage.setItem("week", "1");
+}
+
+let currentWeek = localStorage.getItem("week");
 let currentYear = new Date().getFullYear();
+let menuIsOpen = false;
 
 // Mobile menu button handler
 const hamburger = document.querySelector(".hamburger");
 const mainMenu = document.querySelector(".main-menu");
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("open");
-  mainMenu.classList.toggle("open");
-});
+hamburger.addEventListener("click", handleMenuOpenClose);
 
 // Nav link handlers
-const navLinks = document.querySelectorAll(".main-menu div");
+const navLinks = document.querySelectorAll(".main-menu-item");
 navLinks.forEach(navLink => {
   navLink.addEventListener("click", e => {
-    currentWeek = Number(e.currentTarget.dataset.week);
+    currentWeek = e.currentTarget.dataset.week;
+    localStorage.setItem("week", currentWeek);
     renderCalendar(currentYear, currentWeek);
-    if (hamburger.classList.contains("open"))
-      hamburger.classList.remove("open");
-    if (mainMenu.classList.contains("open")) mainMenu.classList.remove("open");
+    handleMenuOpenClose();
   });
 });
+
+// Page overlay for closing the menu
+const overlay = document.querySelector(".overlay");
+overlay.addEventListener("click", handleMenuOpenClose);
+
+// Open or close the menu
+function handleMenuOpenClose() {
+  menuIsOpen = !menuIsOpen;
+  if (menuIsOpen) {
+    hamburger.classList.add("open");
+    mainMenu.classList.add("open");
+    overlay.style.display = "block";
+  } else {
+    hamburger.classList.remove("open");
+    mainMenu.classList.remove("open");
+    overlay.style.display = "none";
+  }
+}
 
 // Create a container to hold the calendar
 const calendarContainer = createDiv("", "calendar-container");
