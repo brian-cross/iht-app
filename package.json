@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel serve src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html",
     "test": "jest"
   },
   "author": "Brian Cross",
