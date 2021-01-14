@@ -315,13 +315,56 @@ header.hidden {
 }
 
 .weekday-shift {
-  background: var(--weekday-shift);
+  background-color: var(--weekday-shift);
 }
 
 .weekend-shift {
-  background: var(--weekend-shift);
+  background-color: var(--weekend-shift);
 }
 
 .inactive {
-  background: var(--inactive);
+  background-color: var(--inactive);
 }
+
+/******************************************************************************
+* Print layout
+******************************************************************************/
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  * {
+    font-size: 10px;
+  }
+
+  header {
+    display: none;
+  }
+
+  .page-container {
+    width: 100%;
+  }
+
+  .month-container {
+    box-shadow: none;
+  }
+}
+
+@media print and (color) {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* @media print and (orientation: landscape) {
+  .calendar-container {
+    grid-template-columns: repeat(4, 20rem);
+  }
+} */
+
+/* @media print and (orientation: portrait) {
+  .calendar-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
