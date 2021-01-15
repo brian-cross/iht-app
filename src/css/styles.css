@@ -231,6 +231,7 @@ header.hidden {
 .legend-container {
   display: flex;
   cursor: default;
+  color: var(--dark);
 }
 
 .legend-container span {
