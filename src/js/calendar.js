@@ -1,5 +1,8 @@
 import rotation from "./rotation";
 import { createDiv } from "./dom";
+import getHolidays from "./holidays";
+
+getHolidays().then(holidays => console.log(holidays));
 
 /**
  * Creates a calendar block for the specified month and year
