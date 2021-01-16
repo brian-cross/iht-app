@@ -357,6 +357,12 @@ header.hidden {
     width: 4rem;
     padding: 0.25em 0;
     text-align: center;
+    border: 1px solid black;
+  }
+
+  .legend-container-print span:nth-child(2) {
+    border-left: none;
+    border-right: none;
   }
 
   .page-container {
