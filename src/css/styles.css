@@ -56,6 +56,7 @@
   --dark: hsl(203, 33%, 24%);
   --primary: var(--weekday-shift);
   --darkest: hsl(203, 33%, 16%);
+  --stat-marker: var(--burnt-sienna);
 }
 
 .theme-marty {
@@ -314,13 +315,21 @@ header.hidden {
   padding: 0.3em 0.3em 1em 0.5em;
 }
 
+.stat-holiday::before {
+  content: "";
+  margin: 0.125em 0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  background-color: var(--stat-marker);
+}
+
 .day-off {
   background-color: var(--day-off);
 }
 
-.stat-holiday {
-  font-weight: bold;
-  color: tomato;
+.today {
+  border: 2px solid black;
 }
 
 .weekday-shift {
@@ -345,6 +354,10 @@ header.hidden {
 
   * {
     font-size: 10px;
+  }
+
+  .today {
+    border: none;
   }
 
   header {

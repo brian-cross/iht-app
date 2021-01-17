@@ -9,6 +9,7 @@ import { createDiv } from "./dom";
  * @param {array} holidays - Array of stat holidays of the form {date: Date, name: Name of holiday}
  */
 function monthContainer(year, month, week, holidays) {
+  const today = new Date().toISOString().split("T")[0];
   const millisecondsPerDay = 1000 * 3600 * 24;
   const dayHeadings = "S,M,T,W,T,F,S".split(",");
 
@@ -47,18 +48,18 @@ function monthContainer(year, month, week, holidays) {
 
   // Calendar date cells
   for (let day = 1; day <= daysInMonth; day++) {
+    const currentDate = new Date(`${month} ${day}, ${year}`)
+      .toISOString()
+      .split("T")[0];
+
     const cell = dayCell(day, rotation[rotationIndex++ % rotation.length]);
 
     // Check if the current date is a stat holiday
-    const statHoliday = isStatHoliday(
-      new Date(`${month} ${day}, ${year}`).toISOString().split("T")[0],
-      holidays
-    );
-
-    if (statHoliday) {
-      console.log(statHoliday);
+    if (isStatHoliday(currentDate, holidays))
       cell.classList.add("stat-holiday");
-    }
+
+    // If we are rendering today's date then highlight the day cell
+    if (currentDate === today) cell.classList.add("today");
 
     monthContainer.appendChild(cell);
   }
