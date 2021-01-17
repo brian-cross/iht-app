@@ -25,27 +25,36 @@ async function getHolidays(year) {
   const easterEndpoint = `${baseUrl}/holidays/${easterMondayId}?year=${actualYear}`;
   const boxingEndpoint = `${baseUrl}/holidays/${boxingDayId}?year=${actualYear}`;
 
-  const promises = await Promise.all([
+  const responseData = await Promise.all([
     fetch(generalEndpoint),
     fetch(civicEndpoint),
     fetch(easterEndpoint),
     fetch(boxingEndpoint),
-  ]);
+  ]).then(async ([res1, res2, res3, res4]) => {
+    const data1 = await res1.json();
+    const data2 = await res2.json();
+    const data3 = await res3.json();
+    const data4 = await res4.json();
+    return [data1, data2, data3, data4];
+  });
 
-  promises.forEach(async promise => {
-    const data = await promise.json();
+  responseData.forEach(data => {
     // Individual holiday
     if (data.holiday) {
       const { holiday } = data;
-      // console.log(`Date: ${holiday.date} Name: ${holiday.nameEn}`);
-      holidayList.push({ date: holiday.date, name: holiday.nameEn });
+      holidayList.push({
+        date: holiday.date,
+        name: holiday.nameEn,
+      });
     }
 
     // Provincial holidays
     if (data.province) {
       data.province.holidays.forEach(holiday => {
-        // console.log(`Date: ${holiday.date} Name: ${holiday.nameEn}`);
-        holidayList.push({ date: holiday.date, name: holiday.nameEn });
+        holidayList.push({
+          date: holiday.date,
+          name: holiday.nameEn,
+        });
       });
     }
   });
