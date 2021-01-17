@@ -1,16 +1,14 @@
 import rotation from "./rotation";
 import { createDiv } from "./dom";
-import getHolidays from "./holidays";
-
-getHolidays().then(holidays => console.log(holidays));
 
 /**
  * Creates a calendar block for the specified month and year
  * @param {number} year - 4 digit year
  * @param {string} month - Name of the month
  * @param {number} week - Schedule rotation week (1 2 3 or 4)
+ * @param {array} holidays - Array of stat holidays of the form {date: Date, name: Name of holiday}
  */
-export function monthContainer(year, month, week = 1) {
+function monthContainer(year, month, week, holidays) {
   const millisecondsPerDay = 1000 * 3600 * 24;
   const dayHeadings = "S,M,T,W,T,F,S".split(",");
 
@@ -29,8 +27,8 @@ export function monthContainer(year, month, week = 1) {
   if (rotationIndex < 0) rotationIndex += rotation.length;
 
   // Day of the week that the month starts and ends
-  const startDay = new Date(`${month} 1, ${year} 00:00:00`).getDay();
-  const endDay = new Date(`${month} ${daysInMonth}, ${year} 00:00:00`).getDay();
+  const startDay = new Date(`${month} 1, ${year}`).getDay();
+  const endDay = new Date(`${month} ${daysInMonth}, ${year}`).getDay();
 
   const monthContainer = createDiv("", "month-container");
 
@@ -49,9 +47,20 @@ export function monthContainer(year, month, week = 1) {
 
   // Calendar date cells
   for (let day = 1; day <= daysInMonth; day++) {
-    monthContainer.appendChild(
-      dayCell(day, rotation[rotationIndex++ % rotation.length])
+    const cell = dayCell(day, rotation[rotationIndex++ % rotation.length]);
+
+    // Check if the current date is a stat holiday
+    const statHoliday = isStatHoliday(
+      new Date(`${month} ${day}, ${year}`).toISOString().split("T")[0],
+      holidays
     );
+
+    if (statHoliday) {
+      console.log(statHoliday);
+      cell.classList.add("stat-holiday");
+    }
+
+    monthContainer.appendChild(cell);
   }
 
   // End padding cells
@@ -66,7 +75,7 @@ export function monthContainer(year, month, week = 1) {
  * Creates a day heading grid cell
  * @param {string} day - First letter of the day (S, M, T...)
  */
-export function dayHeading(day) {
+function dayHeading(day) {
   return createDiv(day, "day-heading");
 }
 
@@ -75,7 +84,7 @@ export function dayHeading(day) {
  * @param {number} dayNumber - Number of the day in the month
  * @param {number} type - 0: day off, 1: weekday shift, 2: weekend shift
  */
-export function dayCell(dayNumber, type = 0) {
+function dayCell(dayNumber, type = 0) {
   let className = "day";
 
   switch (type) {
@@ -98,7 +107,7 @@ export function dayCell(dayNumber, type = 0) {
 /**
  * Creates an empty calendar grid cell with the style set to inactive
  */
-export function paddingCell() {
+function paddingCell() {
   return createDiv("", "day inactive");
 }
 
@@ -108,7 +117,7 @@ export function paddingCell() {
  * @param {string} month - Name of the month
  * @param {number} week - Schedule rotation week (1 2 3 or 4)
  */
-export function monthHeading(year, month, week) {
+function monthHeading(year, month, week) {
   const container = document.createElement("div");
   container.classList.add("month-heading");
   const yearSpan = document.createElement("span");
@@ -128,7 +137,7 @@ export function monthHeading(year, month, week) {
  * @param {number} year - 4 digit year
  * @param {number} month - The full name of the month (January, February, etc...)
  */
-export function numDaysInMonth(year, month) {
+function numDaysInMonth(year, month) {
   if (
     month === "April" ||
     month === "June" ||
@@ -144,3 +153,15 @@ export function numDaysInMonth(year, month) {
   }
   return 31;
 }
+
+/**
+ * Checks the date against an array of stat holiday objects to see if the dates match.
+ * @param {string} date - Date to check. Format: "YYYY-MM-DD".
+ * @param {array} holidays - Array of stat holiday objects to check against.
+ * @returns {object|undefined} The stat holiday object if found, undefined if not.
+ */
+function isStatHoliday(date, holidays) {
+  return holidays.find(holiday => holiday.date === date);
+}
+
+export default monthContainer;
