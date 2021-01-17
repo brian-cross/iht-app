@@ -367,6 +367,7 @@ header.hidden {
 
   .page-container {
     width: 100%;
+    margin: 0 auto;
   }
 
   .month-container {
