@@ -318,6 +318,11 @@ header.hidden {
   background-color: var(--day-off);
 }
 
+.stat-holiday {
+  font-weight: bold;
+  color: tomato;
+}
+
 .weekday-shift {
   background-color: var(--weekday-shift);
 }
