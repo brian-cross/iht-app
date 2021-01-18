@@ -9,7 +9,10 @@ import { createDiv } from "./dom";
  * @param {array} holidays - Array of stat holidays of the form {date: Date, name: Name of holiday}
  */
 function monthContainer(year, month, week, holidays) {
-  const today = new Date().toISOString().split("T")[0];
+  const now = Date.now();
+  const offset = new Date(now).getTimezoneOffset() * 60 * 1000;
+  const today = new Date(now - offset).toISOString().split("T")[0];
+
   const millisecondsPerDay = 1000 * 3600 * 24;
   const dayHeadings = "S,M,T,W,T,F,S".split(",");
 
