@@ -1,6 +1,7 @@
-import months from "./months";
-import { monthContainer } from "./calendar";
 import { createDiv } from "./dom";
+import getHolidays from "./holidays";
+import months from "./months";
+import monthContainer from "./calendar";
 import "./scroll";
 
 if (!localStorage.getItem("week")) {
@@ -50,11 +51,12 @@ const calendarContainer = createDiv("", "calendar-container");
 document.querySelector(".page-container").appendChild(calendarContainer);
 
 // Render the calendar after removing any existing calendar
-function renderCalendar(year, week) {
+async function renderCalendar(year, week) {
+  const holidays = await getHolidays(year); // Get list of stat holidays for the year
   while (calendarContainer.firstChild)
     calendarContainer.removeChild(calendarContainer.firstChild);
   months.forEach(month =>
-    calendarContainer.appendChild(monthContainer(year, month, week))
+    calendarContainer.appendChild(monthContainer(year, month, week, holidays))
   );
 }
 
