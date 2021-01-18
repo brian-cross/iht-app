@@ -55,8 +55,11 @@ function monthContainer(year, month, week, holidays) {
     const cell = dayCell(day, rotation[rotationIndex++ % rotation.length]);
 
     // Check if the current date is a stat holiday
-    if (isStatHoliday(currentDate, holidays))
+    const statHoliday = isStatHoliday(currentDate, holidays);
+    if (statHoliday) {
       cell.classList.add("stat-holiday");
+      cell.appendChild(createDiv(statHoliday.name, "tooltiptext"));
+    }
 
     // If we are rendering today's date then highlight the day cell
     if (currentDate === today) cell.classList.add("today");
