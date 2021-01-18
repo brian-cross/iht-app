@@ -198,6 +198,7 @@ header.hidden {
 .overlay {
   display: none;
   position: fixed;
+  z-index: 2;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -208,6 +209,7 @@ header.hidden {
 ******************************************************************************/
 .main-menu {
   position: absolute;
+  user-select: none;
   top: var(--main-header-height);
   right: 0;
   transform: translateX(100%);
@@ -276,6 +278,7 @@ header.hidden {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   gap: 1rem;
+  user-select: none;
 }
 
 .month-container {
