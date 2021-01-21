@@ -3,6 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
 
+let browser;
+
 async function fetchServiceCodes() {
   const {
     LOGIN_EMAIL,
@@ -14,7 +16,7 @@ async function fetchServiceCodes() {
   const options = NODE_ENV === "production" ? null : { devtools: true };
 
   console.log("Launching browser.");
-  const browser = await puppeteer.launch(options);
+  browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
   console.log(`Navigating to ${SERVICE_CODES_URL}`);
@@ -31,77 +33,88 @@ async function fetchServiceCodes() {
 
   console.log("Waiting for page load.");
 
-  page.on("load", async () => {
-    console.log("Page loaded. Getting service codes.");
+  await waitForPageLoad(page);
 
-    await page.waitForSelector("a[name^=list]");
-    await page.waitForSelector("table.tablesorter");
+  console.log("Getting service codes.");
 
-    const serviceCodes = await page.evaluate(() => {
-      const codeTables = [];
+  await page.waitForSelector("a[name^=list]");
+  await page.waitForSelector("table.tablesorter");
 
-      // Tables used from site:
-      // 1, 2, 3, 4, 5, 6, 8, 11, 12, 15
-      const tableIndexes = [1, 2, 3, 4, 5, 6, 8, 11, 12, 15];
+  return await page.evaluate(() => {
+    const codeTables = [];
 
-      const tableBodies = document.querySelectorAll(
-        "table.tablesorter > tbody"
-      );
+    // Tables used from site:
+    // 1, 2, 3, 4, 5, 6, 8, 11, 12, 15
+    const tableIndexes = [1, 2, 3, 4, 5, 6, 8, 11, 12, 15];
 
-      // The headings are accompanied by empty anchor tags both shared within
-      // a parent element. Use this to find the headings.
-      const headingAnchorTags = document.querySelectorAll("a[name^=list]");
+    const tableBodies = document.querySelectorAll("table.tablesorter > tbody");
 
-      tableIndexes.forEach(i => {
-        const table = {
-          heading: "",
-          codes: [],
-        };
+    // The headings are accompanied by empty anchor tags both shared within
+    // a parent element. Use this to find the headings.
+    const headingAnchorTags = document.querySelectorAll("a[name^=list]");
 
-        // Table headings
-        const tableHeading = headingAnchorTags[i - 1].parentElement.textContent;
+    tableIndexes.forEach(i => {
+      const table = {
+        heading: "",
+        codes: [],
+      };
 
-        table.heading = tableHeading;
+      // Table headings
+      const tableHeading = headingAnchorTags[i - 1].parentElement.textContent;
 
-        const tableRows = tableBodies[i - 1].querySelectorAll("tr");
+      table.heading = tableHeading;
 
-        tableRows.forEach(row => {
-          const cell1 = row.childNodes[0];
-          const cell2 = row.childNodes[1];
+      const tableRows = tableBodies[i - 1].querySelectorAll("tr");
 
-          // Strip off the start and end brackets from the numeric code
-          const code = cell1.textContent.substring(1, 4);
-          // The title of the code
-          const title = cell2.childNodes[0].textContent.trim();
-          // If the second cell isn't there use an empty string, otherwise
-          // it contains the description of the code
-          const description = cell2?.childNodes[1]?.textContent.trim() || "";
+      tableRows.forEach(row => {
+        const cell1 = row.childNodes[0];
+        const cell2 = row.childNodes[1];
 
-          table.codes.push({
-            code,
-            title,
-            description,
-          });
+        // Strip off the start and end brackets from the numeric code
+        const code = cell1.textContent.substring(1, 4);
+        // The title of the code
+        const title = cell2.childNodes[0].textContent.trim();
+        // If the second cell isn't there use an empty string, otherwise
+        // it contains the description of the code
+        const description = cell2?.childNodes[1]?.textContent.trim() || "";
+
+        table.codes.push({
+          code,
+          title,
+          description,
         });
-
-        codeTables.push(table);
       });
-      return codeTables;
+
+      codeTables.push(table);
     });
-
-    console.log("Writing file.");
-    fs.writeFile(
-      path.join(__dirname, "serviceCodes.json"),
-      JSON.stringify(serviceCodes, null, 2),
-      err => {
-        if (err) return console.log(err);
-        console.log("Wrote file.");
-      }
-    );
-
-    console.log("Closing browser.");
-    await browser.close();
+    return codeTables;
   });
 }
 
-fetchServiceCodes();
+/**
+ * Sets up an event listener that triggers when the page is loaded.
+ * Returns a promise which resolves when the event fires.
+ * @param {puppeteer.Page} page - The puppeteer page instance to wait for
+ */
+function waitForPageLoad(page) {
+  return new Promise(resolve => {
+    page.on("load", () => {
+      resolve();
+    });
+  });
+}
+
+fetchServiceCodes().then(async codes => {
+  console.log("Writing file.");
+  fs.writeFile(
+    path.join(__dirname, "serviceCodes.json"),
+    JSON.stringify(codes, null, 2),
+    err => {
+      if (err) return console.log(err);
+      console.log("Wrote file.");
+    }
+  );
+
+  console.log("Closing browser.");
+  await browser.close();
+});
