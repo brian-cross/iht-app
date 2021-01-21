@@ -5,6 +5,11 @@ const puppeteer = require("puppeteer");
 
 let browser;
 
+/**
+ * Navigates to the required web page, logs in and scrapes the IHT service call
+ * resolution codes. Returns a promise which resolves to an array of code table
+ * objects.
+ */
 async function fetchServiceCodes() {
   const {
     LOGIN_EMAIL,
