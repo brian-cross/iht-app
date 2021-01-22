@@ -2,42 +2,11 @@ require("dotenv").config();
 const puppeteer = require("puppeteer");
 
 /**
- * Navigates to the required web page, logs in and scrapes the IHT service call
- * resolution codes. Returns a promise which resolves to an array of code table
- * objects.
+ * Callback which implements page scraping for service call codes.
+ * Returns a promise which resolves to an array of code table objects.
+ * @param {puppeteer.Page} - The page instance to scrape.
  */
-async function getServiceCodes() {
-  const {
-    LOGIN_EMAIL,
-    LOGIN_PASSWORD,
-    NODE_ENV,
-    SERVICE_CODES_URL,
-  } = process.env;
-
-  const options = NODE_ENV === "production" ? null : { devtools: true };
-
-  console.log("Launching browser.");
-  const browser = await puppeteer.launch(options);
-  const page = await browser.newPage();
-
-  console.log(`Navigating to ${SERVICE_CODES_URL}`);
-  await page.goto(SERVICE_CODES_URL);
-
-  await page.waitForSelector("#sso-login-submit", { visible: true });
-  await page.click("#sso-login-submit");
-
-  console.log("Logging in.");
-  await page.waitForSelector("#userNameInput");
-  await page.type("#userNameInput", LOGIN_EMAIL);
-  await page.type("#passwordInput", LOGIN_PASSWORD);
-  await page.click("#submitButton");
-
-  console.log("Waiting for page load.");
-
-  await waitForPageLoad(page);
-
-  console.log("Getting service codes.");
-
+async function getServiceCodes(page) {
   await page.waitForSelector("a[name^=list]");
   await page.waitForSelector("table.tablesorter");
 
@@ -91,23 +60,7 @@ async function getServiceCodes() {
     return codeTables;
   });
 
-  console.log("Closing browser.");
-  await browser.close();
-
   return serviceCodes;
-}
-
-/**
- * Sets up an event listener that triggers when the page is loaded.
- * Returns a promise which resolves when the event fires.
- * @param {puppeteer.Page} page - The puppeteer page instance to wait for
- */
-function waitForPageLoad(page) {
-  return new Promise(resolve => {
-    page.on("load", () => {
-      resolve();
-    });
-  });
 }
 
 module.exports = getServiceCodes;

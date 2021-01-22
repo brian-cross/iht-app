@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel serve src/index.html",
     "build": "rm -rf dist && parcel build src/index.html",
-    "scraper": "node src/scraper/scraper.js",
+    "scraper": "node src/scraper/main.js",
     "test": "jest"
   },
   "author": "Brian Cross",
