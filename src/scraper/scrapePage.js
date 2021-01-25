@@ -4,6 +4,7 @@ const puppeteer = require("puppeteer");
 async function scrapePage(callback, options) {
   const { email, password, url } = options;
 
+  // In dev mode launch the browser in headful mode with dev tools open
   const puppeteerOptions =
     process.env.NODE_ENV === "production" ? null : { devtools: true };
 
@@ -29,9 +30,13 @@ async function scrapePage(callback, options) {
 
   console.log("Page loaded, retrieving data.");
 
+  // Page is loaded so pass control to the callback to implement scraping
   const result = await callback(page);
 
-  await browser.close();
+  if (process.env.NODE_ENV === "production") {
+    // Keep the browser window open in dev mode
+    await browser.close();
+  }
 
   return result;
 }
