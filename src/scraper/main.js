@@ -4,8 +4,10 @@ const path = require("path");
 
 const scrapePage = require("./scrapePage");
 const getServiceCodes = require("./getServiceCodes");
+const getTbcCodes = require("./getTbcCodes");
 
-const fileName = "serviceCodes.json";
+const serviceCodesFileName = "serviceCodes.json";
+const tbcCodesFileName = "tbcCodes.json";
 
 const {
   LOGIN_EMAIL,
@@ -14,18 +16,26 @@ const {
   SERVICE_CODES_URL,
 } = process.env;
 
-scrapePage(getServiceCodes, {
+// scrapePage(getServiceCodes, {
+//   email: LOGIN_EMAIL,
+//   password: LOGIN_PASSWORD,
+//   url: SERVICE_CODES_URL,
+// }).then(async codes => {
+//   console.log("Writing file.");
+//   fs.writeFile(
+//     path.join(__dirname, serviceCodesFileName),
+//     JSON.stringify(codes, null, 2),
+//     err => {
+//       if (err) return console.log(err);
+//       console.log("Wrote file.");
+//     }
+//   );
+// });
+
+scrapePage(getTbcCodes, {
   email: LOGIN_EMAIL,
   password: LOGIN_PASSWORD,
-  url: SERVICE_CODES_URL,
-}).then(async codes => {
-  console.log("Writing file.");
-  fs.writeFile(
-    path.join(__dirname, fileName),
-    JSON.stringify(codes, null, 2),
-    err => {
-      if (err) return console.log(err);
-      console.log("Wrote file.");
-    }
-  );
+  url: TBC_CODES_URL,
+}).then(data => {
+  console.log(data);
 });
