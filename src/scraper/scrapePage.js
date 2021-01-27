@@ -6,7 +6,7 @@ async function scrapePage(callback, options) {
 
   // In dev mode launch the browser in headful mode with dev tools open
   const puppeteerOptions =
-    process.env.NODE_ENV === "production" ? null : { devtools: true };
+    process.env.NODE_ENV === "production" ? undefined : { devtools: true };
 
   console.log("Launching browser.");
   const browser = await puppeteer.launch(puppeteerOptions);
