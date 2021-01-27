@@ -10,6 +10,11 @@ async function getServiceCodes(page) {
   await page.waitForSelector("a[name^=list]");
   await page.waitForSelector("table.tablesorter");
 
+  // The page rendering time is all over the place. Wait for a few seconds
+  // after the first selectors appear to let the page finish rendering.
+  // Prevents the script from randomly crashing.
+  await page.waitForTimeout(5000);
+
   const serviceCodes = await page.evaluate(async () => {
     const codeTables = [];
 
