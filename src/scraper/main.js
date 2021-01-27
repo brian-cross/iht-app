@@ -18,50 +18,40 @@ const {
   SERVICE_CODES_URL,
 } = process.env;
 
-// scrapePage(getServiceCodes, {
-//   email: LOGIN_EMAIL,
-//   password: LOGIN_PASSWORD,
-//   url: SERVICE_CODES_URL,
-// }).then(async codes => {
-//   console.log("Writing file.");
+scrapePage(getTbcCodesWithDescriptions, {
+  email: LOGIN_EMAIL,
+  password: LOGIN_PASSWORD,
+  url: TBC_CODES_URL,
+}).then(console.log);
+
+// (async function () {
+//   const [serviceCodes, tbcWithRates, tbcWithDescriptions] = await Promise.all([
+//     scrapePage(getServiceCodes, {
+//       email: LOGIN_EMAIL,
+//       password: LOGIN_PASSWORD,
+//       url: SERVICE_CODES_URL,
+//     }),
+//     scrapePage(getTbcCodesWithRates, {
+//       email: LOGIN_EMAIL,
+//       password: LOGIN_PASSWORD,
+//       url: TBC_PDF_URL,
+//     }),
+//     scrapePage(getTbcCodesWithDescriptions, {
+//       email: LOGIN_EMAIL,
+//       password: LOGIN_PASSWORD,
+//       url: TBC_CODES_URL,
+//     }),
+//   ]);
+
+//   // Write service codes JSON
 //   fs.writeFile(
 //     path.join(__dirname, serviceCodesFileName),
-//     JSON.stringify(codes, null, 2),
+//     JSON.stringify(serviceCodes, null, 2),
 //     err => {
 //       if (err) return console.log(err);
-//       console.log("Wrote file.");
 //     }
 //   );
-// });
 
-(async function () {
-  const [serviceCodes, tbcWithRates, tbcWithDescriptions] = await Promise.all([
-    scrapePage(getServiceCodes, {
-      email: LOGIN_EMAIL,
-      password: LOGIN_PASSWORD,
-      url: SERVICE_CODES_URL,
-    }),
-    scrapePage(getTbcCodesWithRates, {
-      email: LOGIN_EMAIL,
-      password: LOGIN_PASSWORD,
-      url: TBC_PDF_URL,
-    }),
-    scrapePage(getTbcCodesWithDescriptions, {
-      email: LOGIN_EMAIL,
-      password: LOGIN_PASSWORD,
-      url: TBC_CODES_URL,
-    }),
-  ]);
-
-  // Write service codes JSON
-  fs.writeFile(
-    path.join(__dirname, serviceCodesFileName),
-    JSON.stringify(serviceCodes, null, 2),
-    err => {
-      if (err) return console.log(err);
-    }
-  );
-
-  console.log(tbcWithRates);
-  console.log(tbcWithDescriptions);
-})();
+//   console.log(tbcWithRates);
+//   console.log(tbcWithDescriptions);
+// })();
