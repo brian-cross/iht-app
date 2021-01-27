@@ -4,8 +4,8 @@ const path = require("path");
 
 const scrapePage = require("./scrapePage");
 const getServiceCodes = require("./getServiceCodes");
-const getTbctbcWithRates = require("./getTbctbcWithRates");
-const getTbctbcWithDescriptions = require("./getTbctbcWithDescriptions");
+const getTbcCodesWithRates = require("./getTbcCodesWithRates");
+const getTbcCodesWithDescriptions = require("./getTbcCodesWithDescriptions");
 
 const serviceCodesFileName = "serviceCodes.json";
 const tbcCodesFileName = "tbcCodes.json";
@@ -41,19 +41,19 @@ const {
       password: LOGIN_PASSWORD,
       url: SERVICE_CODES_URL,
     }),
-    scrapePage(getTbctbcWithRates, {
+    scrapePage(getTbcCodesWithRates, {
       email: LOGIN_EMAIL,
       password: LOGIN_PASSWORD,
       url: TBC_PDF_URL,
     }),
-    scrapePage(getTbctbcWithDescriptions, {
+    scrapePage(getTbcCodesWithDescriptions, {
       email: LOGIN_EMAIL,
       password: LOGIN_PASSWORD,
       url: TBC_CODES_URL,
     }),
   ]);
 
-  // Write service codes JSON file
+  // Write service codes JSON
   fs.writeFile(
     path.join(__dirname, serviceCodesFileName),
     JSON.stringify(serviceCodes, null, 2),
