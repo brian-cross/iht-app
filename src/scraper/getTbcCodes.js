@@ -1,23 +1,26 @@
 const fs = require("fs");
 const path = require("path");
-const pdf = require("pdf-parse");
+const { PdfReader } = require("pdfreader");
 const puppeteer = require("puppeteer");
 
 /**
  * Callback which implements page scraping for task based codes.
  * Downloads and parses the PDF code sheet.
- * Returns a promise that resolves to an array of objects with codes and rates:
+ * Returns a promise that resolves to an array of objects with codes,
+ * descriptions and rates:
  * [
  *  {
  *    code: 123,
+ *    description, "The description",
  *    rate: $1.00
- *  } ...
+ *  }, ...
  * ]
  * @param {puppeteer.Page} - The page instance to scrape.
  */
-async function getTbcCodesWithRates(page) {
+async function getTbcCodes(page) {
   const downloadPath = __dirname;
   const fileName = "IHT Quick Reference Guide - Apr 30 2020.pdf";
+  const filePath = path.join(downloadPath, fileName);
 
   // Set download path for TBC code PDF file
   const client = await page.target().createCDPSession();
@@ -29,29 +32,39 @@ async function getTbcCodesWithRates(page) {
   // Download the file
   await page.waitForSelector("a.jive-link-attachment-small");
   await page.click("a.jive-link-attachment-small");
-  await waitForFileExists(path.join(downloadPath, fileName));
+  await waitForFileExists(filePath);
 
-  // Pull the text out of the PDF file
-  const dataBuffer = fs.readFileSync(path.join(downloadPath, fileName));
-  const pdfText = await pdf(dataBuffer).then(data => data.text);
-
-  // Use a regex to match the 3 digit TBC code and its associated pay rate
-  const matches = pdfText.match(
-    /(?<!\d)\d{3}(?![\.\d+])|\$\d{1,3}\.\d{2}(?!\d)/gm
-  );
-
-  const codesWithRates = [];
-
-  // The last match in the array is an extra 3 digit code we don't need so
-  // we skip the last array element.
-  for (let i = 0; i < matches.length - 1; i += 2) {
-    codesWithRates.push({
-      code: matches[i],
-      rate: matches[i + 1],
+  // Extract the raw text strings from the PDF file
+  const pdfStrings = await new Promise((resolve, reject) => {
+    const items = [];
+    new PdfReader().parseFileItems(filePath, (err, item) => {
+      if (err) reject(err);
+      else if (!item) resolve(items);
+      else if (item.text) {
+        items.push(item.text.trim());
+      }
     });
-  }
+  });
 
-  return codesWithRates;
+  // Clean up - delete the PDF
+  fs.unlink(filePath, err => {
+    if (err) console.log(err);
+  });
+
+  // Build the array of code objects and return it
+  const tbcCodes = [];
+
+  pdfStrings.forEach((str, index) => {
+    if (str.match(/^\d{3}$/gm)) {
+      tbcCodes.push({
+        code: str,
+        description: pdfStrings[index + 1],
+        rate: pdfStrings[index + 2],
+      });
+    }
+  });
+
+  return tbcCodes;
 }
 
 /**
@@ -96,4 +109,4 @@ function waitForFileExists(filePath, timeout = 15000) {
   });
 }
 
-module.exports = getTbcCodesWithRates;
+module.exports = getTbcCodes;

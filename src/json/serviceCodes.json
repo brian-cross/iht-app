@@ -1,0 +1,1207 @@
+[
+  {
+    "heading": "101-199 CUSTOMER GENERATED ISSUES SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "101",
+        "title": "FAULTY / INCOMPATIBLE TV",
+        "description": "This code is used when a TV is faulty or incompatible with Shaw equipment."
+      },
+      {
+        "code": "102",
+        "title": "FAULTY / INCOMPATIBLE VCR / DVD",
+        "description": "This code is used when a VCR or DVD player is faulty or incompatible with Shaw equipment."
+      },
+      {
+        "code": "103",
+        "title": "FAULTY / INCOMPATIBLE CABLES / JUMPERS",
+        "description": "This code is used when the inter-connect cables or jumpers are faulty or incompatible and were replaced."
+      },
+      {
+        "code": "104",
+        "title": "FAULTY / INCOMPATIBLE TELEPHONE / FAX",
+        "description": "This code is used when the telephony equipment is faulty or incompatible with Shaw equipment."
+      },
+      {
+        "code": "106",
+        "title": "FAULTY / INCOMPATIBLE ALARM SYSTEM",
+        "description": "This code is used when the customer’s alarm system is faulty or incompatible with Shaw equipment."
+      },
+      {
+        "code": "108",
+        "title": "FAULTY / INCOMPATIBLE STORAGE DEVICE (UNSUPPORTED)",
+        "description": "This code is used when an unsupported 3rd party storage device is faulty or incompatible."
+      },
+      {
+        "code": "109",
+        "title": "FAULTY / INCOMPATIBLE COMPUTER / PERIPHERAL",
+        "description": "This code is used when the computer or peripheral is outdated, faulty or incompatible."
+      },
+      {
+        "code": "112",
+        "title": "FAULTY OR INCOMPATIBLE STEREO OR HOME THEATRE COMPONENT(S)",
+        "description": "This code is used when stereo equipment or home theatre components are faulty or incompatible."
+      },
+      {
+        "code": "114",
+        "title": "INCORRECTLY CONFIGURED TELEPHONE / FAX",
+        "description": "This code is used when the telephone/fax machine has not been configured correctly."
+      },
+      {
+        "code": "116",
+        "title": "INCORRECTLY CONFIGURED ALARM SYSTEM",
+        "description": "This code is used when the alarm system has not been configured correctly."
+      },
+      {
+        "code": "120",
+        "title": "INCORRECTLY CONFIGURED COMPUTER / PERIPHERAL",
+        "description": "This code is used when the computer or computer equipment has not been configured correctly."
+      },
+      {
+        "code": "122",
+        "title": "CUSTOMER REFUSED EQUIPMENT SWAP",
+        "description": "This code is used when the customer refuses to have their equipment swapped while our tech is on site."
+      },
+      {
+        "code": "125",
+        "title": "CUSTOMER NOT HOME",
+        "description": "This code is to be used when the customer is not home. Please note that the applicable NBH procedures apply."
+      },
+      {
+        "code": "126",
+        "title": "CANCELLED CALL PRIOR TO TRUCK ROLL",
+        "description": "This code is to be used only when the service call has been cancelled prior to the truck roll. Please refer to code 811 / 812 if applicable."
+      },
+      {
+        "code": "131",
+        "title": "CANCELLED CALL AFTER TRUCK ROLL",
+        "description": "This code is to be used only when the service call has been cancelled after the truck has rolled. Please refer to code 811 / 812 if applicable."
+      },
+      {
+        "code": "133",
+        "title": "NO ACCESS",
+        "description": "This code is used when the technician is unable to access Shaw equipment due to various hindrances (no keys, locked gate, obstacles etc.)"
+      },
+      {
+        "code": "134",
+        "title": "WRONG ADDRESS",
+        "description": "This code is used when the technician has a service call for the incorrect address."
+      },
+      {
+        "code": "135",
+        "title": "COMMUNICATION BARRIER",
+        "description": "This code is used when the technician is unable to successfully communicate with the customer. (example: language barrier)"
+      },
+      {
+        "code": "136",
+        "title": "NO ADULT PRESENT",
+        "description": "This code is used when the customer’s premises has no one present over the age of 18."
+      },
+      {
+        "code": "141",
+        "title": "UNSUPPORTED VIRUS / SPYWARE",
+        "description": "This code is used when a computer is performing unsatisfactory due to a virus, unsupported virus scanner software and/or spyware."
+      },
+      {
+        "code": "142",
+        "title": "UNSUPPORTED O/S",
+        "description": "This code is used when a computer is performing unsatisfactory due to an unsupported operating system."
+      },
+      {
+        "code": "143",
+        "title": "UNSUPPORTED NETWORK",
+        "description": "This code is used when a computer or internet is performing unsatisfactory due to an unsupported network."
+      },
+      {
+        "code": "144",
+        "title": "WI-FI SPEED ISSUE; 3RD PARTY ROUTER",
+        "description": "This code is used when a 3rd party Wi-Fi or related equipment is causing internet speed issues."
+      },
+      {
+        "code": "145",
+        "title": "IR / WI-FI INTERFERENCE",
+        "description": "This code is used when wireless equipment is being interfered with by other devices using the same frequencies. (including TV-remote interference, Wi-Fi internet interference)."
+      },
+      {
+        "code": "151",
+        "title": "DEMO – DIGITAL VIDEO TV / EQUIPMENT",
+        "description": "This code is used when the customer requires a demonstration on how to use their digital set-top box."
+      },
+      {
+        "code": "152",
+        "title": "DEMO – PHONE / PHONE FEATURES",
+        "description": "This code is used when the customer requires a demonstration on how to use their shaw phone features and/or understand their MTA setup."
+      },
+      {
+        "code": "153",
+        "title": "DEMO – INTERNET (EMAIL SETUP / SOFTWARE)",
+        "description": "This code is used when the customer requires a demonstration on how to use their internet / email or email setup / Shaw secure."
+      },
+      {
+        "code": "155",
+        "title": "FAULTY EMAIL SETTINGS",
+        "description": "This code is used when email settings are configured incorrectly."
+      },
+      {
+        "code": "156",
+        "title": "FAULTY BROWSER",
+        "description": "This code is used when the internet browser is not functioning correctly."
+      },
+      {
+        "code": "158",
+        "title": "FAULTY DEVICE DRIVER",
+        "description": "This code is used when the computer has a corrupt device driver or the correct driver is missing / unavailable."
+      },
+      {
+        "code": "161",
+        "title": "FAULTY 3RD PARTY INSTALLATION (NOT SUPPORTED)",
+        "description": "This code is used when the technician identifies a faulty, non-supported 3rd party installation as causing service impairments."
+      },
+      {
+        "code": "165",
+        "title": "FAULTY / RESET BUILDING MODULATOR",
+        "description": "This code is used when the security camera channel is not functioning, due to a modulator issue."
+      },
+      {
+        "code": "169",
+        "title": "NO AC POWER; SHAW EQUIPMENT DISCONNECTED",
+        "description": "This code is used when ac power has been disconnected from Shaw equipment."
+      },
+      {
+        "code": "170",
+        "title": "ELECTRICAL FAULT (GROUND / AC OUTLET / POLARITY)",
+        "description": "This code is used when faulty electrical house wiring is causing interference with shaw services / equipment."
+      },
+      {
+        "code": "171",
+        "title": "RF HOOKED UP THROUGH POWER-BAR",
+        "description": "This code is used when RF cable has been connected through a power-bar and is causing service impairments."
+      },
+      {
+        "code": "173",
+        "title": "INCORRECTLY CONFIGURED STEREO / HOME THEATRE SYSTEM",
+        "description": "This code is used when stereo equipment or home theatre components have been incorrectly configured."
+      },
+      {
+        "code": "176",
+        "title": "AUTO TUNE TV / SAP",
+        "description": "This code is used when a television requires an auto tune or sap adjustment in order to receive proper services."
+      },
+      {
+        "code": "182",
+        "title": "EQUIPMENT PICKED-UP",
+        "description": "This code is used when Shaw equipment has been picked up and returned."
+      },
+      {
+        "code": "190",
+        "title": "RF CABLE TO EQUIPMENT DISCONNECTED",
+        "description": "This code is used when the RF cable has been disconnected from equipment."
+      },
+      {
+        "code": "199",
+        "title": "CHARGEABLE SERVICE CALL",
+        "description": "This code is used when the customer requires work to be performed that is not part of our technician’s regular scope or is over and above Shaw service commitments. (cosmetic drop replacements)"
+      }
+    ]
+  },
+  {
+    "heading": "201-270 RF SIGNAL ISSUES SERVICE CALL COMPLETION CODES RF ",
+    "codes": [
+      {
+        "code": "201",
+        "title": "FAULTY RF HOUSE WIRING; CANNOT BE PLACED / REFUSED",
+        "description": "This code is used when the house wiring has been deemed faulty/not repairable and the customer was informed and has refused the rewire option."
+      },
+      {
+        "code": "202",
+        "title": "NEW LEVELS ADJUSTMENT",
+        "description": "This code is used in conjunction with other completion codes to identify those connectors / signals have been adjusted to meet new level specifications."
+      },
+      {
+        "code": "203",
+        "title": "FAULTY RF HOUSE WIRING",
+        "description": "Rewired / repaired this code is used when it has been determined that the current house wiring is faulty and the customer has allowed the repair/rewire."
+      },
+      {
+        "code": "205",
+        "title": "DROP REPAIRED; AERIAL / UNDERGROUND",
+        "description": "This code is used when a repair is performed to a faulty section(s) of an aerial or underground drop. Proper connector/splice weather sealing is required."
+      },
+      {
+        "code": "206",
+        "title": "DROP REMOVED - AERIAL / UNDERGROUND",
+        "description": "This code is used when a Shaw drop has been removed from the premises."
+      },
+      {
+        "code": "207",
+        "title": "DROP REPLACED - AERIAL / UNDERGROUND",
+        "description": "This code is used for the replacement of an aerial or underground drop."
+      },
+      {
+        "code": "208",
+        "title": "INSTALL / PRE-WIRE SECONDARY DROP",
+        "description": "This code is used when a secondary drop is required, usually for the purpose of a main/bsmt split. This code can also be used for installing a new drop."
+      },
+      {
+        "code": "209",
+        "title": "FAULTY UNDERGROUND DROP",
+        "description": "Temp cannot be placed / refused this code is used when it has been determined that the current drop is faulty and a temporary drop cannot be placed due to physical or safety limitations."
+      },
+      {
+        "code": "211",
+        "title": "FAULTY UNDERGROUND DROP",
+        "description": "Temporary placed this code is to be used when it has been determined that the current drop is faulty and a temporary drop is placed. The temporary line must be placed as neatly as possible and in such a manner that it does not create a hazard to persons or property."
+      },
+      {
+        "code": "213",
+        "title": "TEMPORARY DROP REPAIRED",
+        "description": "This code is used when a repair is performed to a faulty section(s) of a temporary drop. Repair must be performed as neatly as possible and in such a manner that it does not create a hazard to persons or property."
+      },
+      {
+        "code": "215",
+        "title": "FAULTY MDU CABLE RISER",
+        "description": "Repaired this code is used when repairs are performed on a section(s) of a faulty MDU riser."
+      },
+      {
+        "code": "216",
+        "title": "FAULTY MDU CABLE RISER",
+        "description": "Not repaired this code is used when it has been determined that the riser is faulty but due to physical limitation or permission, the riser cannot be repaired."
+      },
+      {
+        "code": "217",
+        "title": "FAULTY TAP JUMPER",
+        "description": "Replaced this code is used when a faulty drop jumper in an MDU panel box is replaced."
+      },
+      {
+        "code": "219",
+        "title": "PASSIVE DROP AMPLIFIER INSTALLED",
+        "description": "This code is used for the installation of a drop amplifier when it is necessary to increase the forward rf levels to meet the current acceptable standard. Whenever possible, the drop amplifier should be installed at the ground location / service entrance."
+      },
+      {
+        "code": "221",
+        "title": "ACTIVE DROP AMPLIFIER INSTALLED",
+        "description": "This code is used for the installation of a drop amplifier when it is necessary to increase the forward and return RF levels to meet the current acceptable standard. Whenever possible, the drop amplifier should be installed at the ground location / service entrance."
+      },
+      {
+        "code": "223",
+        "title": "DROP AMP NOT REQUIRED",
+        "description": "Removed this code is used for the removal of a drop amplifier that is no longer required. The removal of the power adapter / power inserter and all associated wiring is required."
+      },
+      {
+        "code": "225",
+        "title": "POWER TO DROP AMPLIFIER DISCONNECTED",
+        "description": "This code is used for the re-connection of the drop amplifier power adapter. The power adapter should be re-located if it is in an area where the disconnection may easily re-occur or if it is on a switched power outlet."
+      },
+      {
+        "code": "227",
+        "title": "FAULTY DROP AMPLIFIER – REPLACED",
+        "description": "This code is used for the replacement of a faulty drop amplifier. The replacement amplifier must be the same type. (passive / active). RF levels should be taken to verify if the drop amplifier is still required."
+      },
+      {
+        "code": "230",
+        "title": "OUTSIDE PROACTIVE",
+        "description": "This code is to be used for resolving service issues for existing services on a proactive service call where only outside access is available."
+      },
+      {
+        "code": "231",
+        "title": "INSIDE PROACTIVE",
+        "description": "This code is to be used for resolving service issues for existing services on a proactive service call where access inside the home was granted."
+      },
+      {
+        "code": "237",
+        "title": "FOUND DISCONNECTED IN ERROR (TAP/GROUND)",
+        "description": "This code is used for the re-connection of a drop at the tap or CSE. Disconnect tags must be removed."
+      },
+      {
+        "code": "238",
+        "title": "FOUND DISCONNECTED IN ERROR (3RD PARTY)",
+        "description": "This code is used for the re-connection of a drop at the tap / CSE / ground location / service entrance, due to a 3rd party disconnection."
+      },
+      {
+        "code": "239",
+        "title": "FOUND DISCONNECTED IN ERROR (CUSTOMER)",
+        "description": "This code is used for the re-connection of a drop at the ground location / service entrance / CSE / outlet due to disconnection by customer."
+      },
+      {
+        "code": "241",
+        "title": "FAULTY CONNECTOR / SPLICE / WALL-PLATE / F81",
+        "description": "This code is for the replacement of a faulty connector or splice on any RF coaxial drop cable, outlet or jumper."
+      },
+      {
+        "code": "242",
+        "title": "FAULTY SPLITTER / COUPLER",
+        "description": "This code is for the replacement of a faulty splitter or directional coupler."
+      },
+      {
+        "code": "243",
+        "title": "FAULTY RF JUMPER",
+        "description": "This code is used for the replacement of a faulty coaxial jumper."
+      },
+      {
+        "code": "244",
+        "title": "EQ - INSTALLED / REMOVED",
+        "description": "This code is used when an in-line equalizer is installed or removed in order to correct the RF slope to specific equipment."
+      },
+      {
+        "code": "245",
+        "title": "RF PAD - INSTALLED / REMOVED / REPLACED",
+        "description": "This code is used when a RF pad is installed or remove in order to attenuate RF levels to current acceptable standards."
+      },
+      {
+        "code": "246",
+        "title": "GROUND ISOLATOR - INSTALLED / REMOVED",
+        "description": "This code is used when a ground isolator is used to prevent hum bars or ground loop voltages. The code is also used when the isolator is no longer required and is removed."
+      },
+      {
+        "code": "247",
+        "title": "INCORRECT FILTER CONFIGURATION - ISSUE RESOLVED",
+        "description": "This code is used to correct the filter configuration in order to meet the requested services."
+      },
+      {
+        "code": "249",
+        "title": "FAULTY FILTER",
+        "description": "This code is used to replace a faulty filter which is causing RF impairment. (this code includes video, data, MOCA, and any other type filters.)"
+      },
+      {
+        "code": "251",
+        "title": "CHANGE SPLITTER CONFIGURATION - ISSUE RESOLVED",
+        "description": "This code is used when outlet wiring is reconfigured at the splitter in order to maximize RF levels. Priority can be given to specific outlets."
+      },
+      {
+        "code": "252",
+        "title": "REMOVE / REPLACE CSE",
+        "description": "This code is used for the removal and/or the replacement of a CSE’s. For CSE’s replaced/repaired due to vandalism, please refer to 253."
+      },
+      {
+        "code": "253",
+        "title": "CABLE / CSE / EQUIPMENT VANDALIZED – REPAIRED / REPLACED",
+        "description": "This code is used when vandalized cable, CSE or equipment has been repaired or replaced"
+      },
+      {
+        "code": "255",
+        "title": "FAULTY APARTMENT TAPS (ES STRIP)",
+        "description": "This code is used when it has been determined that the (ES strips/ MDU taps) are faulty and have been replaced."
+      },
+      {
+        "code": "256",
+        "title": "FAULTY MOCA FILTER, REPLACED",
+        "description": "This code is used for the replacement of a faulty MOCA filter."
+      },
+      {
+        "code": "257",
+        "title": "FAULTY / INCORRECT MOCA NETWORK CONFIGURATION",
+        "description": "This coded is used when repair or correction to the MOCA network configuration is completed in order to ensure the proper signal path."
+      },
+      {
+        "code": "260",
+        "title": "TRACE AND TAG DROP",
+        "description": "This code is used when an un-identified drop is traced and toned. Identification and drop tag is required."
+      },
+      {
+        "code": "261",
+        "title": "VERIFICATION OF CUSTOMER SERVICES",
+        "description": "This code is used to verify the customer is receiving the correct services."
+      },
+      {
+        "code": "265",
+        "title": "UNAUTHORIZED / ILLEGAL CONNECTION",
+        "description": "This code is used when a customer drop/outlet if found illegally connected. Tech is required to note address, drop, on service call and disconnect."
+      },
+      {
+        "code": "270",
+        "title": "INTERMITTENT - ALL CONNECTIONS REPLACED",
+        "description": "This code is used for intermittent RF issues. All connectors, splices and jumpers have been replaced, thereby eliminating these areas as the source of the intermittent issue."
+      }
+    ]
+  },
+  {
+    "heading": "271-289 SHAW FRIENDS CONCIERGE VISIT SERVICE CALL COMPLETION CODES RF ",
+    "codes": [
+      {
+        "code": "271",
+        "title": "CUSTOMER EDUCATION – TV (GENERAL)",
+        "description": "This code is used when a customer is provided information or demonstration on television functions and features of a general nature."
+      },
+      {
+        "code": "272",
+        "title": "CUSTOMER EDUCATION – PVR / GUIDE",
+        "description": "This code is used when a customer is provided information or demonstration on the use of a Shaw PVR’s recording functions and/or guide."
+      },
+      {
+        "code": "273",
+        "title": "CUSTOMER EDUCATION – VOD / PPV",
+        "description": "This code is used when a customer is provided information or demonstration on the use of Shaw’s VOD and/or PPV services and features."
+      },
+      {
+        "code": "274",
+        "title": "CUSTOMER EDUCATION – INTERNET",
+        "description": "This code is used when a customer is provided information or demonstration on Shaw’s internet services and features."
+      },
+      {
+        "code": "275",
+        "title": "CUSTOMER EDUCATION – HOME PHONE",
+        "description": "This code is used when a customer is provided information or demonstration on Shaw’s home phone services and features."
+      },
+      {
+        "code": "276",
+        "title": "CONFIGURATION – TV EQUIPMENT",
+        "description": "This code is used when a customer’s television equipment is reconfigured to enhance the customer’s viewing experience."
+      },
+      {
+        "code": "277",
+        "title": "CONFIGURATION – INTERNET EQUIPMENT",
+        "description": "This code is used when a customer’s internet equipment is reconfigured to enhance the customer’s online experience."
+      },
+      {
+        "code": "278",
+        "title": "CONFIGURATION – PHONE EQUIPMENT",
+        "description": "This code is used when a customer’s home phone equipment is reconfigured to enhance the customer’s phone experience."
+      },
+      {
+        "code": "279",
+        "title": "SERVICE UPGRADE",
+        "description": "This code is used when a customer decides to upgrade their Shaw services based on their needs. This can include package upgrades and/or additions of new services."
+      },
+      {
+        "code": "280",
+        "title": "UNABLE TO PICKUP / NO CHARGE",
+        "description": "Biz use only - Technician determined it's a safety or no access issue that was out of our Customers control, Do not charge for CPE."
+      },
+      {
+        "code": "281",
+        "title": "UNABLE TO PICKUP / BILLABLE",
+        "description": "Biz use only - Customer refused or cannot provide technician access, charge equipment to account."
+      },
+      {
+        "code": "282",
+        "title": "SALE (TV, INTERNET, OR PHONE)",
+        "description": "This code is used when a technician makes a sale during the course of a concierge visit."
+      },
+      {
+        "code": "290",
+        "title": "Confirmed Premises Entry",
+        "description": "Currently used for entry into home during COVID-19."
+      },
+      {
+        "code": "291",
+        "title": "DEMO - FREERANGE REGISTRATION",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "heading": "301-399 SHAW DIGITAL VIDEO ISSUES SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "301",
+        "title": "FAULTY MOTOROLA DCT (SWAPPED)",
+        "description": "This code is used when a Motorola DCT, VOD box is faulty and swapped out."
+      },
+      {
+        "code": "302",
+        "title": "NEW GUIDE BOX SERVICE (NON-PVR)",
+        "description": "This code is used in conjunction with other completion codes to identify that a new guide non-PVR DCT required service / adjustment."
+      },
+      {
+        "code": "303",
+        "title": "FAULTY ARRIS GATEWAY (SWAPPED)",
+        "description": "This code is used when an Arris gateway is faulty and swapped out."
+      },
+      {
+        "code": "304",
+        "title": "FAULTY ARRIS PORTAL PLAYER (SWAPPED)",
+        "description": "This code is used when an Arris portal player is faulty and swapped out."
+      },
+      {
+        "code": "305",
+        "title": "FAULTY PACE SET-TOP - (SWAPPED)",
+        "description": "This code is used when a pace set-top box is faulty and swapped out."
+      },
+      {
+        "code": "306",
+        "title": "FAULTY PVR EXPANDER (SWAPPED)",
+        "description": "This code is used when an expander is faulty and swapped out."
+      },
+      {
+        "code": "307",
+        "title": "NEW GUIDE BOX SERVICE (PVR)",
+        "description": "This code is used in conjunction with other completion codes to identify that a new guide pvr dct required service / adjustment."
+      },
+      {
+        "code": "308",
+        "title": "FAULTY REMOTE (SWAPPED)",
+        "description": "This code is used when a Shaw remote is faulty and swapped out."
+      },
+      {
+        "code": "310",
+        "title": "FAULTY DIGITAL VIDEO EQUIPMENT - NOT SWAPPED / OFF WARRANTY",
+        "description": "This code is used when the digital video equipment is faulty but is not swapped because the warranty has expired."
+      },
+      {
+        "code": "311",
+        "title": "FAULTY DIGITAL VIDEO EQUIPMENT - HARDWARE FAILURE (SWAPPED)",
+        "description": "This code is used when the digital video equipment is swapped because of a hardware failure such as a faulty hard drive or faulty tuner."
+      },
+      {
+        "code": "312",
+        "title": "FAULTY DIGITAL VIDEO EQUIPMENT - COSMETIC DAMAGE (SWAPPED)",
+        "description": "This code is used when the digital video equipment is swapped because of cosmetic issues, such as scratches."
+      },
+      {
+        "code": "314",
+        "title": "FAULTY PVR EXPANDER – NOT SWAPPED / OFF WARRANTY / 3RD PARTY",
+        "description": "This code is used when an expander is faulty but the not swapped because the warranty has expired."
+      },
+      {
+        "code": "319",
+        "title": "KNOWN DIGITAL VIDEO EQUIPMENT ISSUE – SWAPPED BRAND / MODEL",
+        "description": "This code is used when the digital video equipment brand or model has a known issue and is swapped for a different brand or model."
+      },
+      {
+        "code": "320",
+        "title": "RELOCATE DIGITAL VIDEO EQUIPMENT",
+        "description": "This code is used when a digital is relocated to another location."
+      },
+      {
+        "code": "322",
+        "title": "FAULTY INTERCONNECT CABLE (SWAPPED)",
+        "description": "This code is used when there is a faulty patch cable \\ interconnect cables (hdmi, component, composite and coax) from the digital box to the customer's equipment."
+      },
+      {
+        "code": "340",
+        "title": "FAULTY / INCORRECT AC POWER SUPPLY",
+        "description": "This code is used when a tech identifies the ac power supply to be faulty. generally, the power supply will not provide power to the equipment."
+      },
+      {
+        "code": "360",
+        "title": "RESET/REFRESH DIGITAL VIDEO EQUIPMENT",
+        "description": "this code is used when a digital box needs to be removed and re-added to the DAC, refreshed or power cycled."
+      },
+      {
+        "code": "362",
+        "title": "REINSTALL/REFORMAT - PVR EXPANDER",
+        "description": "This code is used when reformatting an expander, or resetting a PVR expander by power cycling or reinstalling."
+      },
+      {
+        "code": "370",
+        "title": "INSTALL / SETUP DIGITAL VIDEO EQUIPMENT",
+        "description": "Install / setup digital video equipment this code is used when installing or connecting new digital video equipment."
+      },
+      {
+        "code": "371",
+        "title": "CONNECT HOME ENTERTAINMENT EQUIPMENT",
+        "description": "Connect home entertainment equipment this code is used a tech connects customer owned home entertainment equipment. for example; surround sound system, DVD player, VCR etc."
+      },
+      {
+        "code": "373",
+        "title": "PROGRAM REMOTE",
+        "description": "This code is used when programming a remote."
+      },
+      {
+        "code": "380",
+        "title": "SET TOP BOX NOT CONNECTED / NOT USED",
+        "description": "This code is used when the digital video equipment is flagged as a non-responder because it is not currently being used."
+      },
+      {
+        "code": "388",
+        "title": "SECURITY CAMERA – SPLITTER / SWITCH INSTALLED / REPLACED",
+        "description": "This code is used when a splitter and or A/B switch is installed so the customer can view the building security camera."
+      },
+      {
+        "code": "399",
+        "title": "REMOTE AUTO-SHIPPED TO CUSTOMER FROM WH",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "heading": "401-479 SHAW INTERNET ISSUES SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "401",
+        "title": "FAULTY MODEM (SWAPPED)",
+        "description": "This code is used when a modem is faulty and is swapped."
+      },
+      {
+        "code": "402",
+        "title": "SHAW STANDALONE ROUTER SERVICE",
+        "description": "This code is used in conjunction with other completion codes to identify that a Shaw standalone router required service / adjustment."
+      },
+      {
+        "code": "410",
+        "title": "FAULTY SHAW SUPPORTED NIC/USB ADAPTER- REPLACED",
+        "description": "This code is used when a Shaw supported (Shaw installed) NIC/USB adapter is found to be faulty and replaced."
+      },
+      {
+        "code": "412",
+        "title": "FAULTY SHAW SUPPORTED NIC/USB ADAPTER- NOT REPLACED",
+        "description": "This code is used when a Shaw supported (Shaw installed) NIC/USB adapter is not replaced. For example; do not have applicable or compatible replacement or change computer to other connection method."
+      },
+      {
+        "code": "420",
+        "title": "RELOCATE MODEM THIS CODE IS USED WHEN MODEM IS MOVED TO A NEW LOCATION.",
+        "description": "This is usually done at the request of the customer or to avoid faulty and un-repairable wiring."
+      },
+      {
+        "code": "422",
+        "title": "FAULTY INTERNET PATCH-CORD (CAT-5)",
+        "description": "This code is used when the cat5 ethernet cable is faulty. Can also be used with a 143 for a long unsupported cat5 ethernet cord installed by the customer."
+      },
+      {
+        "code": "440",
+        "title": "FAULTY / INCORRECT AC POWER SUPPLY",
+        "description": "This code is used when the wrong AC power supply is plugged into a wired modem or wi-fi gateway modem, or the ac power supply is defective."
+      },
+      {
+        "code": "452",
+        "title": "SWAP TO ADVANCED WI-FI MODEM",
+        "description": ""
+      },
+      {
+        "code": "460",
+        "title": "RESET / REFRESHED / POWER-CYCLED MODEM",
+        "description": "This code is used when a power-cycle or firmware update corrects connection issue for RF or to the customer’s equipment. For example; power-cycled modem and computer is now able to obtain an IP and connect."
+      },
+      {
+        "code": "465",
+        "title": "SHAW SECURE - SUPPORTED",
+        "description": "This code is used when there is an issue with Shaw Secure. For example; Shaw Secure firewall is blocking access to the internet or Shaw Secure needs to be re-installed."
+      },
+      {
+        "code": "470",
+        "title": "INSTALL / SETUP INTERNET MODEM",
+        "description": "This code is used when the modem is not setup yet."
+      },
+      {
+        "code": "471",
+        "title": "SPEEDS / CONNECTIONS VERIFIED ACCEPTABLE BY TECH",
+        "description": "This code is used when the speeds are tested and confirmed acceptable by tech. Can be used with 144 when speeds are proven acceptable on tech laptop."
+      }
+    ]
+  },
+  {
+    "heading": "480-499 SHAW WI-FI INTERNET ISSUES SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "480",
+        "title": "FAULTY WI-FI MODEM SWAPPED (WIRELESS ISSUE)",
+        "description": "This code is used when it is determined that a faulty wi-fi modem is the cause for the loss of or poor wireless signal."
+      },
+      {
+        "code": "481",
+        "title": "FAULTY WI-FI MODEM SWAPPED (NON-WIRELESS ISSUE)",
+        "description": "This code is used when it is determined that a faulty Wi-Fi modem is the cause for loss of or poor internet connection (non-wireless)."
+      },
+      {
+        "code": "482",
+        "title": "WI-FI CONGESTION / INTERFERENCE",
+        "description": "This code is used when reduction in wireless service is caused by multiple wireless signals and/or interference caused by other wireless devices (baby monitors, cordless phones, microwaves, etc.)."
+      },
+      {
+        "code": "483",
+        "title": "WI-FI CONNECTIVITY ISSUE, UNSUPPORTED / 3RD PARTY HARDWARE",
+        "description": "This code is used when a customer’s wireless device is unable to connect or has poor connectivity, after it is determined the wi-fi modem is fully operational (verified by technician laptop or mobile device)."
+      },
+      {
+        "code": "484",
+        "title": "RELOCATE WI-FI MODEM, ISSUE RESOLVED",
+        "description": "This code is used when a wi-fi modem is relocated to another area of the customer’s premises to facilitate greater wireless coverage."
+      },
+      {
+        "code": "485",
+        "title": "CONFIGURED WI-FI CHANNEL / FREQUENCY, ISSUE RESOLVED",
+        "description": "This code is used when a technician adjusts the channel / frequency of the Wi-Fi modem to allow for increased connectivity or speed resulting in improved performance or restoration of services."
+      },
+      {
+        "code": "486",
+        "title": "WI-FI SPEEDS / CONNECTIVITY VERIFIED BY TECHNICIAN, FOUND ACCEPTABLE",
+        "description": "This code is used when a technician determines that a customer’s Wi-Fi modem is functioning properly. Verification of proper RF connections and applicable signal levels must be completed prior to testing."
+      },
+      {
+        "code": "487",
+        "title": "WI-FI SPEEDS / CONNECTIVITY ISSUE, NOT RESOLVED",
+        "description": "This code is used when a wireless speed or connectivity issue persists despite technician taking all corrective measures possible (account must be noted)."
+      },
+      {
+        "code": "488",
+        "title": "KNOWN WI-FI SPEEDS / CONNECTIVITY / RANGE ISSUE, SWAPPED BRAND / MODEL",
+        "description": "This code is used when it is determined that a particular Wi-Fi modem brand / model is swapped for an alternate brand / model with different specifications that allow for increased functionality in a customer’s home."
+      },
+      {
+        "code": "489",
+        "title": "WI-FI CUSTOMER EDUCATION",
+        "description": "This code is used when the cause of the issue is related to a customer’s lack of familiarity with Wi-Fi (modem functionality, securing modem, changing SSID, etc.)"
+      },
+      {
+        "code": "490",
+        "title": "WI-FI CUSTOMER EDUCATION WI-FI SIGNAL ISSUE – WI-PRY RESOLVED",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "heading": "501-599 SHAW PHONE ISSUES SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "501",
+        "title": "FAULTY MTA ARRIS (SWAPPED)",
+        "description": "This code is used when a tech swaps out a faulty Arris MTA. This is done only after all other trouble shooting has failed."
+      },
+      {
+        "code": "505",
+        "title": "FAULTY MTA MOTOROLA (SWAPPED)",
+        "description": "This code is used when a tech swaps out a faulty Motorola MTA. This is done only after all other trouble shooting has failed."
+      },
+      {
+        "code": "508",
+        "title": "FAULTY / INCOMPATIBLE POS DEVICE",
+        "description": "This code is used when a tech has determined that a customer’s POS is faulty or incompatible with our services."
+      },
+      {
+        "code": "509",
+        "title": "See [509-513 SHAW BUSINESS SMART SUITE COMPLETION CODES]",
+        "description": ""
+      },
+      {
+        "code": "520",
+        "title": "RELOCATE MTA",
+        "description": "This code is used when a tech physically relocates the digital phone CPE from one location to another. This would usually be done at the request of the customer."
+      },
+      {
+        "code": "521",
+        "title": "FAULTY VOICE / DATA OUTLET DEACTIVATED",
+        "description": "This code is used when a faulty voice/data outlet is unable to be repaired and is deactivated from the network. All faulty wiring from this outlet is removed from the demarc assembly."
+      },
+      {
+        "code": "522",
+        "title": "FAULTY VOICE / DATA WALL-PLATE",
+        "description": "This code is used when a faulty voice/data outlet is identified & repaired / replaced."
+      },
+      {
+        "code": "523",
+        "title": "FAULTY SPLICE",
+        "description": "This code is used when a tech physically repairs a splice in the telco wiring, inside or outside the premise."
+      },
+      {
+        "code": "524",
+        "title": "FAULTY VOICE / DATA HOUSE WIRING",
+        "description": "This code is used when the tech identifies the voice/data house wiring to be faulty and repairs / replaces wiring."
+      },
+      {
+        "code": "526",
+        "title": "FAULTY DEMARK BLOCK",
+        "description": "This code is used when a tech has determined that a demarc block is physically damaged or not working properly"
+      },
+      {
+        "code": "527",
+        "title": "FAULTY TELCO RISER REPAIRED",
+        "description": "This code is used when a tech has determined that the telco riser is faulty and has completed the necessary repairs."
+      },
+      {
+        "code": "528",
+        "title": "FAULTY TELCO RISER NOT REPAIRED",
+        "description": "This code is used when a tech has determined the telco riser is faulty or damaged and cannot be repaired."
+      },
+      {
+        "code": "531",
+        "title": "FAULTY 8 PORT CONNECTION",
+        "description": "This code is used when a tech has determined that the 8 port connection block is faulty and is replaced."
+      },
+      {
+        "code": "533",
+        "title": "FAULTY 3RD PARTY TELCO CONNECTED",
+        "description": "This code is used when a tech has determined that a 3rd party device or wiring is faulty and has removed it from the system."
+      },
+      {
+        "code": "534",
+        "title": "FAULTY INTERCOM",
+        "description": "This code is used when a tech has determined that the intercom card / system are defective or faulty."
+      },
+      {
+        "code": "535",
+        "title": "FAULTY ENTER-PHONE SWITCH",
+        "description": "This code is used when a tech has determined that the enter-phone switch is faulty or damaged."
+      },
+      {
+        "code": "537",
+        "title": "FAULTY MTA BACKUP BATTERIES (REPLACED)",
+        "description": "This code is used when the backup batteries are no longer holding a charge / defective and have been replaced."
+      },
+      {
+        "code": "539",
+        "title": "NO MTA BATTERIES FOUND (PLACED BATTERY)",
+        "description": "This code is used when a tech has found no batteries installed in the MTA and has placed new batteries."
+      },
+      {
+        "code": "540",
+        "title": "FAULTY / INCORRECT AC POWER SUPPLY",
+        "description": "This code is used when a tech has replaced the ac power supply due to it being faulty or the incorrect model."
+      },
+      {
+        "code": "545",
+        "title": "INSTALL / REMOVE ENTER-PHONE SWITCH",
+        "description": "This code is used when a tech has physically removed or installed an enter-phone switch."
+      },
+      {
+        "code": "546",
+        "title": "INSTALL / REMOVE PORTING SWITCH",
+        "description": "This code is used when a tech has physically removed or installed a porting switch."
+      },
+      {
+        "code": "550",
+        "title": "CONFIGURED INCORRECTLY – INTERCOM",
+        "description": "This code is used when a tech has reconfigured the intercom after the initial install has been completed."
+      },
+      {
+        "code": "551",
+        "title": "CONFIGURED INCORRECTLY - P.O.S",
+        "description": "This code is used when a tech has reconfigured the P.O.S. after the initial install has been completed."
+      },
+      {
+        "code": "552",
+        "title": "CONFIGURED INCORRECTLY - ALARM",
+        "description": "This code is used when a tech has reconfigured the alarm system after the initial install has been completed"
+      },
+      {
+        "code": "560",
+        "title": "REFRESH / UPGRADE - MTA FIRMWARE",
+        "description": "This code is used when a tech physically resets the MTA to complete a firmware refresh / upgrade."
+      },
+      {
+        "code": "570",
+        "title": "INSTALL / SETUP MTA",
+        "description": "This code is used when a tech has completed all the steps in a Shaw phone install."
+      },
+      {
+        "code": "571",
+        "title": "PHONE JACK NOT ACTIVATED",
+        "description": "This code is used when a tech identifies and activates an existing voice/data outlet."
+      },
+      {
+        "code": "575",
+        "title": "MTA OFF HOOK - NO FAULT FOUND ON ARRIVAL",
+        "description": "This code is used only after a tech has completed all necessary trouble shooting and has found no faults in the current setup / services."
+      },
+      {
+        "code": "576",
+        "title": "REMOVED INTERCOM SWITCH – HARDWIRED",
+        "description": "This code is used when a tech physically removes an intercom switch and has completed the proper back feed to the intercom system."
+      },
+      {
+        "code": "581",
+        "title": "DISCONNECTION OF 3RD PARTY SERVICES",
+        "description": "This code is used when a tech has completed the disconnection of a third party device."
+      },
+      {
+        "code": "582",
+        "title": "DISCONNECTION OF UNUSED VOICE / DATA OUTLET",
+        "description": "This code is used when a tech physically disconnects unused voice/data outlets at the customers telco demarc location."
+      },
+      {
+        "code": "591",
+        "title": "UNSUPPORTED PBX",
+        "description": "This code is used when a tech has determined that the PBX system has an issue and no other trouble shooting is necessary."
+      }
+    ]
+  },
+  {
+    "heading": "701-799 REFERRAL MANAGEMENT SERVICE CALL COMPLETION CODES",
+    "codes": [
+      {
+        "code": "701",
+        "title": "MAINTENANCE REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified a mainline issue and has submitted a referral for the maintenance team to follow up."
+      },
+      {
+        "code": "702",
+        "title": "CONSTRUCTION REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified a construction issue and has submitted a referral for the construction team to follow up."
+      },
+      {
+        "code": "703",
+        "title": "INSTALLATIONS REFERRAL SUBMITTED",
+        "description": "Used when a tech has determined an installation tech is required to complete the work and has submitted a referral for the installation team to follow up."
+      },
+      {
+        "code": "704",
+        "title": "SERVICE REFERRAL SUBMITTED",
+        "description": "Used when a tech was unable to complete the service call and has submitted a referral for the service team to follow up."
+      },
+      {
+        "code": "705",
+        "title": "SUPERVISOR REFERRAL SUBMITTED",
+        "description": "Used when a tech has encountered an issue that requires supervisor involvement and has submitted a referral for his supervisor to follow up."
+      },
+      {
+        "code": "706",
+        "title": "MDU REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified an issue with wiring feeding the suite or distribution panel problem and has submitted a referral for follow up."
+      },
+      {
+        "code": "707",
+        "title": "PLANNING REFERRAL SUBMITTED",
+        "description": "Used when a plant design issue has been identified and a referral has been submitted for the planning team to follow up."
+      },
+      {
+        "code": "708",
+        "title": "HEAD-END REFERRAL SUBMITTED",
+        "description": "Used when source or head-end equipment issue has been identified and a referral has been submitted for the head-end team to follow up."
+      },
+      {
+        "code": "709",
+        "title": "REWIRE REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified an issue with wiring and a referral has been submitted for follow up."
+      },
+      {
+        "code": "710",
+        "title": "DROP REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified an issue with the customers drop, and has submitted a referral to have that drop repaired / replaced."
+      },
+      {
+        "code": "711",
+        "title": "PEDESTAL REFERRAL SUBMITTED",
+        "description": "Used when an issue has been identified with our distribution pedestal or service box and has submitted a referral for follow up."
+      },
+      {
+        "code": "712",
+        "title": "KEY REFERRAL SUBMITTED",
+        "description": "Used when a tech has identified a building access key issue and has submitted a referral for follow up."
+      },
+      {
+        "code": "751",
+        "title": "DROP PRE-SURVEY (CALGARY)",
+        "description": ""
+      },
+      {
+        "code": "752",
+        "title": "DROP ISSUES FOR BURIAL (CALGARY)",
+        "description": ""
+      },
+      {
+        "code": "754",
+        "title": "DROP DAMAGED AND SCHEDULED TO BE BURIED (CALGARY)",
+        "description": ""
+      },
+      {
+        "code": "755",
+        "title": "NO DROP PROBLEMS FOUND - CALL COMPLETED (CALGARY)",
+        "description": ""
+      },
+      {
+        "code": "759",
+        "title": "DROP BURIED - CALL COMPLETED (CALGARY)",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "heading": "801-850 PREVENTABLE SERVICE CALLS SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "801",
+        "title": "PROVISIONING PROBLEM / ERROR",
+        "description": "Used when the customers issue was caused by the incorrect provisioning of services."
+      },
+      {
+        "code": "804",
+        "title": "WRONG NODE",
+        "description": "Used when the issue was caused by the account being on the wrong node."
+      },
+      {
+        "code": "805",
+        "title": "WRONG CHANNEL MAP",
+        "description": "Used when the issue listed was caused by the digital set top box being on the wrong channel map."
+      },
+      {
+        "code": "807",
+        "title": "FAILURE TO CHECK SERVICE ALERT OR SATURATION",
+        "description": "Used when the customers issue is a known issue. Problem should have been identified prior to rolling out a truck."
+      },
+      {
+        "code": "809",
+        "title": "UNNECESSARY TRUCK ROLL – NON SHAW EQUIPMENT",
+        "description": "Used when a service call is generated to remove/repair plant equipment that does not belong to shaw. (drops, pedestals etc.)."
+      },
+      {
+        "code": "811",
+        "title": "CANCELLED CALL - SHAW REP",
+        "description": "Used when service call is cancelled by our frontline staff (TSR, CSR, TSD)."
+      },
+      {
+        "code": "812",
+        "title": "CANCELLED CALL - DUE OUTAGE",
+        "description": "Used when a service call was generated due to an area outage."
+      },
+      {
+        "code": "821",
+        "title": "DELINQUENT ACCOUNT",
+        "description": "Used when a service call was generated due to an overdue account and customer’s equipment was de-authorized."
+      },
+      {
+        "code": "825",
+        "title": "NODE SATURATED",
+        "description": "Used when a customer’s node has been identified as saturated, would normally be used in conjunction of 708 code. Problem should be identified prior to truck roll.."
+      },
+      {
+        "code": "826",
+        "title": "CARD SATURATED HEAD-END ROUTER EQUIPMENT ISSUE",
+        "description": "Would normally be used in conjunction of 708 code. Problem should be identified prior to truck roll."
+      },
+      {
+        "code": "831",
+        "title": "ADDED / REMOVED VIDEO FEATURE(S)",
+        "description": "Used when the issue could have been resolved by adding or removing provisioning of video services/features."
+      },
+      {
+        "code": "832",
+        "title": "ADDED / REMOVED SDP FEATURE(S)",
+        "description": "Used when the issue could have been resolved by adding or removing provisioning of phone services/features."
+      },
+      {
+        "code": "833",
+        "title": "ADDED / REMOVED INTERNET FEATURE(S)",
+        "description": "Used when the issue could have been resolved by adding or removing provisioning of internet services/features."
+      },
+      {
+        "code": "850",
+        "title": "ACCOUNT SETUP INCORRECTLY",
+        "description": "Used when the issue caused due to an incorrectly setup account in CBS."
+      }
+    ]
+  },
+  {
+    "heading": "950-999 FTTP: FIBER TO THE PREMISE SERVICE CALL COMPLETION CODES ",
+    "codes": [
+      {
+        "code": "950",
+        "title": "LOW LIGHT CONDITION",
+        "description": "This code is used when the fiber light does not meet specification."
+      },
+      {
+        "code": "951",
+        "title": "FAULTY FIBER CONNECTOR – JUMPER",
+        "description": "This code is used when the fiber jumper is faulty and was replaced."
+      },
+      {
+        "code": "952",
+        "title": "FAULTY FIBER CONNECTOR",
+        "description": "This code is used when the fiber connection is faulty or incompatible and was replaced."
+      },
+      {
+        "code": "953",
+        "title": "FAULTY ONU",
+        "description": "This code is used when the ONU is faulty and was replaced."
+      },
+      {
+        "code": "954",
+        "title": "FAULTY ONT",
+        "description": "This code is used when the ONT is faulty and was replaced."
+      },
+      {
+        "code": "955",
+        "title": "FAULTY CAT 5 CONNECTOR – JUMPER",
+        "description": "This code is used when a cat5 connector or jumper is faulty and incompatible."
+      },
+      {
+        "code": "956",
+        "title": "FAULTY CAT 5",
+        "description": "This code is used when the cat5 cable is faulty and needs replacement."
+      },
+      {
+        "code": "957",
+        "title": "WRONG ONT PORT CONNECTED",
+        "description": "This code is used when the connection to the ONT was incorrect."
+      },
+      {
+        "code": "958",
+        "title": "DROP FOUND DISCONNECTED – FTC",
+        "description": "This code is used when the fiber drop was found disconnected at FTC."
+      },
+      {
+        "code": "959",
+        "title": "DROP FOUND DISCONNECTED – FEP",
+        "description": "This code is used when the fiber drop was found disconnected at FEP."
+      },
+      {
+        "code": "960",
+        "title": "FAULTY 316",
+        "description": "This code is used when the router is faulty and was replaced."
+      },
+      {
+        "code": "961",
+        "title": "FAULTY 316 CONFIGURATION",
+        "description": "This code is used when the router configuration was faulty and was corrected."
+      },
+      {
+        "code": "962",
+        "title": "FAULTY 316 POWER SUPPLY",
+        "description": "This code is to be used when the power supply was faulty and replaced."
+      },
+      {
+        "code": "963",
+        "title": "FAULTY FIBER SPLICE",
+        "description": "This code is to be used only when a fiber splice is found to be defective and was replaced."
+      },
+      {
+        "code": "964",
+        "title": "FAULTY TAP PORT",
+        "description": "This code is to be used when a faulty tap port has been identified. This should be referred immediately for repair."
+      },
+      {
+        "code": "965",
+        "title": "FAULTY UPS",
+        "description": "This code is used when the UPS unit is faulty and was replaced."
+      },
+      {
+        "code": "966",
+        "title": "FAULTY UPS – BATTERY",
+        "description": "This code is used when the battery supply for the UPS is faulty and was replaced."
+      },
+      {
+        "code": "967",
+        "title": "FAULTY OPTICAL SPLITTER",
+        "description": "This code is used when the optical splitter was found to be faulty and was replaced/repaired."
+      },
+      {
+        "code": "968",
+        "title": "FAULTY DISTRIBUTION PORT",
+        "description": "This code is used when one of the distribution ports are found to be faulty."
+      },
+      {
+        "code": "969",
+        "title": "PLANT ISSUE",
+        "description": "This code is used when the fiber performance is related to the plant. A referral should be booked immediately."
+      },
+      {
+        "code": "970",
+        "title": "MAINTENANCE REFERRAL",
+        "description": "This code is used for all maintenance issues."
+      },
+      {
+        "code": "971",
+        "title": "NETWORK REFERRAL",
+        "description": "This code is used for all network/head end related concerns."
+      },
+      {
+        "code": "972",
+        "title": "FTC DAMAGE",
+        "description": "This code is used when the FTC is damaged and is replaced."
+      },
+      {
+        "code": "973",
+        "title": "PROVISIONING ERROR - RESOLVED",
+        "description": "This code is used for all provisioning related issues."
+      },
+      {
+        "code": "980",
+        "title": "CUSTOMER EQUIPMENT",
+        "description": "This code is used for all non-Shaw equipment."
+      },
+      {
+        "code": "981",
+        "title": "CUSTOMER GENERATED CALL",
+        "description": "This code is used for calls that were generated by the customer and not related to Shaw fiber or coaxial components."
+      }
+    ]
+  }
+]

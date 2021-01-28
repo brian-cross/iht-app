@@ -4,54 +4,38 @@ const path = require("path");
 
 const scrapePage = require("./scrapePage");
 const getServiceCodes = require("./getServiceCodes");
-const getTbcCodesWithRates = require("./getTbcCodesWithRates");
-const getTbcCodesWithDescriptions = require("./getTbcCodesWithDescriptions");
+const getTbcCodes = require("./getTbcCodes");
 
-const serviceCodesFileName = "serviceCodes.json";
-const tbcCodesFileName = "tbcCodes.json";
+const jsonFilesDir = path.join(__dirname, "../json");
+const serviceCodesFilePath = path.join(jsonFilesDir, "serviceCodes.json");
+const tbcCodesFilePath = path.join(jsonFilesDir, "tbcCodes.json");
 
 const {
   LOGIN_EMAIL,
   LOGIN_PASSWORD,
-  TBC_CODES_URL,
   TBC_PDF_URL,
   SERVICE_CODES_URL,
 } = process.env;
 
-scrapePage(getTbcCodesWithDescriptions, {
+scrapePage(getTbcCodes, {
   email: LOGIN_EMAIL,
   password: LOGIN_PASSWORD,
-  url: TBC_CODES_URL,
-}).then(console.log);
+  url: TBC_PDF_URL,
+}).then(tbcCodes => {
+  writeJSONFile(tbcCodesFilePath, tbcCodes);
+});
 
-// (async function () {
-//   const [serviceCodes, tbcWithRates, tbcWithDescriptions] = await Promise.all([
-//     scrapePage(getServiceCodes, {
-//       email: LOGIN_EMAIL,
-//       password: LOGIN_PASSWORD,
-//       url: SERVICE_CODES_URL,
-//     }),
-//     scrapePage(getTbcCodesWithRates, {
-//       email: LOGIN_EMAIL,
-//       password: LOGIN_PASSWORD,
-//       url: TBC_PDF_URL,
-//     }),
-//     scrapePage(getTbcCodesWithDescriptions, {
-//       email: LOGIN_EMAIL,
-//       password: LOGIN_PASSWORD,
-//       url: TBC_CODES_URL,
-//     }),
-//   ]);
+scrapePage(getServiceCodes, {
+  email: LOGIN_EMAIL,
+  password: LOGIN_PASSWORD,
+  url: SERVICE_CODES_URL,
+}).then(serviceCodes => {
+  writeJSONFile(serviceCodesFilePath, serviceCodes);
+});
 
-//   // Write service codes JSON
-//   fs.writeFile(
-//     path.join(__dirname, serviceCodesFileName),
-//     JSON.stringify(serviceCodes, null, 2),
-//     err => {
-//       if (err) return console.log(err);
-//     }
-//   );
-
-//   console.log(tbcWithRates);
-//   console.log(tbcWithDescriptions);
-// })();
+function writeJSONFile(path, data) {
+  fs.writeFile(path, JSON.stringify(data, null, 2), err => {
+    if (err) throw new Error(err);
+    else console.log(`File written successfully: "${path}"`);
+  });
+}
