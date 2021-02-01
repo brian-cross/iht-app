@@ -333,6 +333,42 @@ header.hidden {
 }
 
 /******************************************************************************
+* Code search page styles
+******************************************************************************/
+.code-search-input-container {
+  --code-search-color: var(--light);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  height: 12rem;
+  padding: 2em;
+  margin: 0 auto;
+  color: var(--code-search-color);
+  background-color: var(--darkest);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.code-search-input-icon svg {
+  position: relative;
+  bottom: -0.25em;
+  height: 2rem;
+  fill: var(--code-search-color);
+}
+
+.code-search-input-label {
+  font-size: 2rem;
+  padding-left: 1em;
+}
+
+#code-search-input {
+  font-size: 1.5rem;
+  height: 2em;
+}
+
+/******************************************************************************
 * Calendar styles
 ******************************************************************************/
 .calendar-container {
