@@ -1,342 +1,342 @@
 [
   {
     "code": "850",
-    "description": "Nobody Home",
+    "title": "Nobody Home",
     "rate": "$11.60"
   },
   {
     "code": "852",
-    "description": "Cancel at Door/Cannot Complete",
+    "title": "Cancel at Door/Cannot Complete",
     "rate": "$11.60"
   },
   {
     "code": "856",
-    "description": "Drop and Go Equipment",
+    "title": "Drop and Go Equipment",
     "rate": "$16.85"
   },
   {
     "code": "300",
-    "description": "Cable Save",
+    "title": "Cable Save",
     "rate": "$25.00"
   },
   {
     "code": "857",
-    "description": "Install - MoCA Filter",
+    "title": "Install - MoCA Filter",
     "rate": "$16.85"
   },
   {
     "code": "309",
-    "description": "Core Cable Sale",
+    "title": "Core Cable Sale",
     "rate": "$25.00"
   },
   {
     "code": "327",
-    "description": "Theme Pack/Channel Sale",
+    "title": "Theme Pack/Channel Sale",
     "rate": "$6.00"
   },
   {
     "code": "333",
-    "description": "Cable Base Package Upgrade",
+    "title": "Cable Base Package Upgrade",
     "rate": "$10.00"
   },
   {
     "code": "800",
-    "description": "Work Order Primary Function",
+    "title": "Work Order Primary Function",
     "rate": "$17.25"
   },
   {
     "code": "391",
-    "description": "Cable Incentive-NTO Directed",
+    "title": "Cable Incentive-NTO Directed",
     "rate": "$50.00"
   },
   {
     "code": "801",
-    "description": "Service Order Primary Function",
+    "title": "Service Order Primary Function",
     "rate": "$17.25"
   },
   {
     "code": "349",
-    "description": "Internet Save",
+    "title": "Internet Save",
     "rate": "$30.00"
   },
   {
     "code": "810",
-    "description": "Install - Internet Modem",
+    "title": "Install - Internet Modem",
     "rate": "$15.25"
   },
   {
     "code": "343",
-    "description": "Core Internet Sale",
+    "title": "Core Internet Sale",
     "rate": "$30.00"
   },
   {
     "code": "811",
-    "description": "Install - DPT",
+    "title": "Install - DPT",
     "rate": "$21.25"
   },
   {
     "code": "560",
-    "description": "Internet Base Package Upgrade",
+    "title": "Internet Base Package Upgrade",
     "rate": "$10.00"
   },
   {
     "code": "812",
-    "description": "Install - Video Master Device",
+    "title": "Install - Video Master Device",
     "rate": "$18.35"
   },
   {
     "code": "392",
-    "description": "Internet Incentive-NTO Directed",
+    "title": "Internet Incentive-NTO Directed",
     "rate": "$50.00"
   },
   {
     "code": "813",
-    "description": "Install - Secondary or Legacy Video Device",
+    "title": "Install - Secondary or Legacy Video Device",
     "rate": "$14.20"
   },
   {
     "code": "820",
-    "description": "Swap - Internet Modem",
+    "title": "Swap - Internet Modem",
     "rate": "$12.90"
   },
   {
     "code": "821",
-    "description": "Swap - DPT",
+    "title": "Swap - DPT",
     "rate": "$12.90"
   },
   {
     "code": "369",
-    "description": "Phone Save",
+    "title": "Phone Save",
     "rate": "$25.00"
   },
   {
     "code": "822",
-    "description": "Swap - Video Device",
+    "title": "Swap - Video Device",
     "rate": "$15.00"
   },
   {
     "code": "359",
-    "description": "Core Phone Sale",
+    "title": "Core Phone Sale",
     "rate": "$25.00"
   },
   {
     "code": "827",
-    "description": "Activate - Secondary Phone Functions",
+    "title": "Activate - Secondary Phone Functions",
     "rate": "$12.75"
   },
   {
     "code": "357",
-    "description": "Additional Phone Line",
+    "title": "Additional Phone Line",
     "rate": "$10.00"
   },
   {
     "code": "828",
-    "description": "Relocate Equipment",
+    "title": "Relocate Equipment",
     "rate": "$6.90"
   },
   {
     "code": "360",
-    "description": "Billable Phone Features Upgrade",
+    "title": "Billable Phone Features Upgrade",
     "rate": "$5.00"
   },
   {
     "code": "829",
-    "description": "(15min) Product Beta - New Product Launch",
+    "title": "(15min) Product Beta - New Product Launch",
     "rate": "$9.65"
   },
   {
     "code": "393",
-    "description": "Phone Incentive-NTO Directed",
+    "title": "Phone Incentive-NTO Directed",
     "rate": "$50.00"
   },
   {
     "code": "540",
-    "description": "Purchased/Rental SD DCT",
+    "title": "Purchased/Rental SD DCT",
     "rate": "$3.00"
   },
   {
     "code": "830",
-    "description": "Install - Permanent Outlet",
+    "title": "Install - Permanent Outlet",
     "rate": "$16.05"
   },
   {
     "code": "541",
-    "description": "Purchased HD DCT",
+    "title": "Purchased HD DCT",
     "rate": "$5.00"
   },
   {
     "code": "831",
-    "description": "Activate/Repair - Existing Outlet",
+    "title": "Activate/Repair - Existing Outlet",
     "rate": "$5.80"
   },
   {
     "code": "542",
-    "description": "Purchased HD PVR",
+    "title": "Purchased HD PVR",
     "rate": "$10.00"
   },
   {
     "code": "832",
-    "description": "Install - Drop",
+    "title": "Install - Drop",
     "rate": "$25.50"
   },
   {
     "code": "543",
-    "description": "Rental HD/PVR/Portal",
+    "title": "Rental HD/PVR/Portal",
     "rate": "$5.00"
   },
   {
     "code": "833",
-    "description": "Outlet - Extended Routing",
+    "title": "Outlet - Extended Routing",
     "rate": "$8.20"
   },
   {
     "code": "544",
-    "description": "Purchased Moxi HD PVR",
+    "title": "Purchased Moxi HD PVR",
     "rate": "$10.00"
   },
   {
     "code": "834",
-    "description": "Drop - Midspan & Pole Contact",
+    "title": "Drop - Midspan & Pole Contact",
     "rate": "$6.50"
   },
   {
     "code": "545",
-    "description": "Purchased Portal",
+    "title": "Purchased Portal",
     "rate": "$5.00"
   },
   {
     "code": "840",
-    "description": "Shaw Certification - Tap Connection",
+    "title": "Shaw Certification - Tap Connection",
     "rate": "$4.50"
   },
   {
     "code": "559",
-    "description": "Internet Modem Purchase",
+    "title": "Internet Modem Purchase",
     "rate": "$5.00"
   },
   {
     "code": "841",
-    "description": "Shaw Certification - Service Entrance(s)",
+    "title": "Shaw Certification - Service Entrance(s)",
     "rate": "$5.80"
   },
   {
     "code": "565",
-    "description": "Wi-Fi Equipment Upgrade",
+    "title": "Wi-Fi Equipment Upgrade",
     "rate": "$2.00"
   },
   {
     "code": "860",
-    "description": "Equipment Pickup",
+    "title": "Equipment Pickup",
     "rate": "$5.20"
   },
   {
     "code": "861",
-    "description": "Customer Experience & Education",
+    "title": "Customer Experience & Education",
     "rate": "$6.43"
   },
   {
     "code": "870",
-    "description": "Install - CSE Box",
+    "title": "Install - CSE Box",
     "rate": "$5.00"
   },
   {
     "code": "350",
-    "description": "CFPP Enrollment",
+    "title": "CFPP Enrollment",
     "rate": "$3.00"
   },
   {
     "code": "871",
-    "description": "Configure - Drop Amp",
+    "title": "Configure - Drop Amp",
     "rate": "$6.50"
   },
   {
     "code": "354",
-    "description": "eBill Enrollment",
+    "title": "eBill Enrollment",
     "rate": "$3.00"
   },
   {
     "code": "872",
-    "description": "Configure - Port Switch",
+    "title": "Configure - Port Switch",
     "rate": "$3.25"
   },
   {
     "code": "390",
-    "description": "Sales Promos & Incentives",
+    "title": "Sales Promos & Incentives",
     "rate": "$10.00"
   },
   {
     "code": "873",
-    "description": "Install - Enterphone Switch",
+    "title": "Install - Enterphone Switch",
     "rate": "$6.00"
   },
   {
     "code": "394",
-    "description": "Value Plan Sign-Up",
+    "title": "Value Plan Sign-Up",
     "rate": "$5.00"
   },
   {
     "code": "874",
-    "description": "NSL Enterphone Backfeed",
+    "title": "NSL Enterphone Backfeed",
     "rate": "$16.15"
   },
   {
     "code": "399",
-    "description": "Over-the-Top Sale",
+    "title": "Over-the-Top Sale",
     "rate": "$1.00"
   },
   {
     "code": "550",
-    "description": "(15min) Project - Install Activity",
+    "title": "(15min) Project - Install Activity",
     "rate": "$9.65"
   },
   {
     "code": "575",
-    "description": "Trainer - Driver",
+    "title": "Trainer - Driver",
     "rate": "$9.65"
   },
   {
     "code": "551",
-    "description": "(15min) Project - Service Activity",
+    "title": "(15min) Project - Service Activity",
     "rate": "$9.65"
   },
   {
     "code": "576",
-    "description": "Trainer - Passenger",
+    "title": "Trainer - Passenger",
     "rate": "$7.45"
   },
   {
     "code": "553",
-    "description": "(15min) Project - Overnight Shifts",
+    "title": "(15min) Project - Overnight Shifts",
     "rate": "$10.81"
   },
   {
     "code": "590",
-    "description": "(15min) Shaw Direct - Install",
+    "title": "(15min) Shaw Direct - Install",
     "rate": "$9.65"
   },
   {
     "code": "566",
-    "description": "(15min) Training and Development",
+    "title": "(15min) Training and Development",
     "rate": "$8.19"
   },
   {
     "code": "591",
-    "description": "(15min) Shaw Direct - Service",
+    "title": "(15min) Shaw Direct - Service",
     "rate": "$9.65"
   },
   {
     "code": "567",
-    "description": "(15min) Information Meetings",
+    "title": "(15min) Information Meetings",
     "rate": "$8.19"
   },
   {
     "code": "747",
-    "description": "External Travel Code",
+    "title": "External Travel Code",
     "rate": "$9.75"
   },
   {
     "code": "785",
-    "description": "Full Shift Pickup",
+    "title": "Full Shift Pickup",
     "rate": "$150.00"
   }
 ]

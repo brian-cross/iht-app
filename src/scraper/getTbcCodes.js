@@ -58,7 +58,7 @@ async function getTbcCodes(page) {
     if (str.match(/^\d{3}$/gm)) {
       tbcCodes.push({
         code: str,
-        description: pdfStrings[index + 1],
+        title: pdfStrings[index + 1],
         rate: pdfStrings[index + 2],
       });
     }
