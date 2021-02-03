@@ -378,6 +378,7 @@ header.hidden {
   position: relative;
   padding: 1rem 3rem;
   border: 1px solid var(--dark);
+  border-top: none;
 }
 
 .search-result-item::before {
@@ -426,6 +427,8 @@ header.hidden {
 * Calendar styles
 ******************************************************************************/
 .calendar-container {
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
