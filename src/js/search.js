@@ -32,7 +32,7 @@ function handleSearchInput(e) {
     hideInputClearButton();
     clearSearchResults();
     return;
-  }
+  } else showInputClearButton();
 
   inputDebounceId = setTimeout(
     () => doCodeSearch(e.target.value),
@@ -66,9 +66,6 @@ function doCodeSearch(searchString) {
 
 function renderSearchResults(searchResults) {
   clearSearchResults();
-
-  if (searchResults.length > 0) showInputClearButton();
-  else hideInputClearButton();
 
   searchResults
     .map(result => {
