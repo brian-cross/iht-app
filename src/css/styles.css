@@ -389,8 +389,6 @@ header.hidden {
   top: 0;
   right: 0;
   height: 100%;
-  transform: scale(1);
-  transition: transform 125ms ease-in-out;
 }
 
 .code-search-clear-btn::before,
@@ -403,22 +401,23 @@ header.hidden {
   width: 0.15em;
   height: 2em;
   background-color: #666;
+  transition: transform 125ms ease-in-out;
 }
 
-.code-search-clear-btn::before {
-  transform: rotate(45deg);
+.code-search-clear-btn.visible::before {
+  transform: scale(1) rotate(45deg);
 }
 
-.code-search-clear-btn::after {
-  transform: rotate(-45deg);
+.code-search-clear-btn.visible::after {
+  transform: scale(1) rotate(-45deg);
 }
 
-.code-search-clear-btn.visible {
-  transform: scale(1);
+.code-search-clear-btn.hidden::before {
+  transform: scale(0) rotate(45deg);
 }
 
-.code-search-clear-btn.hidden {
-  transform: scale(0);
+.code-search-clear-btn.hidden::after {
+  transform: scale(0) rotate(-45deg);
 }
 
 .search-result-list {
