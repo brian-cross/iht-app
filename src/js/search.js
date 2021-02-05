@@ -10,8 +10,14 @@ const serviceCodes = serviceCodesData.default.reduce((acc, curr) => {
 // Query DOM - input field and node to render the search results
 const searchInput = document.getElementById("code-search-input");
 const resultList = document.querySelector(".search-result-list");
+const clearInputBtn = document.querySelector(".code-search-clear-btn");
 
 searchInput.addEventListener("input", handleSearchInput);
+clearInputBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  clearSearchResults();
+  hideInputClearButton();
+});
 
 let searchResults = [];
 let inputDebounceId;
@@ -21,6 +27,13 @@ const inputDebounceInverval = 500;
 // Runs the search after a debounce interval
 function handleSearchInput(e) {
   clearTimeout(inputDebounceId);
+
+  if (e.target.value.length === 0) {
+    hideInputClearButton();
+    clearSearchResults();
+    return;
+  }
+
   inputDebounceId = setTimeout(
     () => doCodeSearch(e.target.value),
     inputDebounceInverval
@@ -52,7 +65,10 @@ function doCodeSearch(searchString) {
 }
 
 function renderSearchResults(searchResults) {
-  while (resultList.firstChild) resultList.removeChild(resultList.firstChild);
+  clearSearchResults();
+
+  if (searchResults.length > 0) showInputClearButton();
+  else hideInputClearButton();
 
   searchResults
     .map(result => {
@@ -75,6 +91,18 @@ function renderSearchResults(searchResults) {
       return listItem;
     })
     .forEach(result => resultList.appendChild(result));
+}
 
-  // console.log(listItems);
+function clearSearchResults() {
+  while (resultList.firstChild) resultList.removeChild(resultList.firstChild);
+}
+
+function showInputClearButton() {
+  clearInputBtn.classList.remove("hidden");
+  clearInputBtn.classList.add("visible");
+}
+
+function hideInputClearButton() {
+  clearInputBtn.classList.remove("visible");
+  clearInputBtn.classList.add("hidden");
 }
