@@ -395,29 +395,79 @@ header.hidden {
 .code-search-clear-btn::after {
   content: "";
   position: absolute;
-  right: 1.5em;
-  top: 20%;
-  bottom: 20%;
-  width: 0.15em;
-  height: 2em;
+  left: 0;
+  top: 50%;
+  transform: scaleX(0) translateY(-50%) rotate(0);
+  width: 2em;
+  height: 0.2em;
   background-color: #666;
-  transition: transform 125ms ease-in-out;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .code-search-clear-btn.visible::before {
-  transform: scale(1) rotate(45deg);
-}
-
-.code-search-clear-btn.visible::after {
-  transform: scale(1) rotate(-45deg);
+  animation-name: show-clr-btn-1;
 }
 
 .code-search-clear-btn.hidden::before {
-  transform: scale(0) rotate(45deg);
+  animation-name: hide-clr-btn-1;
+}
+
+.code-search-clear-btn.visible::after {
+  animation-name: show-clr-btn-2;
 }
 
 .code-search-clear-btn.hidden::after {
-  transform: scale(0) rotate(-45deg);
+  animation-name: hide-clr-btn-2;
+}
+
+@keyframes show-clr-btn-1 {
+  0% {
+    transform: scaleX(0) rotate(0);
+  }
+  50% {
+    transform: scaleX(1) rotate(0);
+  }
+  100% {
+    transform: scaleX(1) rotate(45deg);
+  }
+}
+
+@keyframes hide-clr-btn-1 {
+  0% {
+    transform: scaleX(1) rotate(45deg);
+  }
+  50% {
+    transform: scaleX(1) rotate(0);
+  }
+  100% {
+    transform: scaleX(0) rotate(0);
+  }
+}
+
+@keyframes show-clr-btn-2 {
+  0% {
+    transform: scaleX(0) rotate(0);
+  }
+  50% {
+    transform: scaleX(1) rotate(0);
+  }
+  100% {
+    transform: scaleX(1) rotate(-45deg);
+  }
+}
+
+@keyframes hide-clr-btn-2 {
+  0% {
+    transform: scaleX(1) rotate(-45deg);
+  }
+  50% {
+    transform: scaleX(1) rotate(0);
+  }
+  100% {
+    transform: scaleX(0) rotate(0);
+  }
 }
 
 .search-result-list {
