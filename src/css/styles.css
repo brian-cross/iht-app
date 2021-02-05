@@ -379,7 +379,6 @@ header.hidden {
   padding-left: 1em;
   padding-right: 2em;
   outline: none;
-  border: 1px solid var(--light);
 }
 
 .code-search-clear-btn {
