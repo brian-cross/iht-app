@@ -22,6 +22,7 @@ clearInputBtn.addEventListener("click", () => {
   searchInput.value = "";
   clearSearchResults();
   hideInputClearButton();
+  searchInput.focus();
 });
 
 let searchResults = [];
