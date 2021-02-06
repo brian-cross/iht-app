@@ -47,9 +47,18 @@ function handleSearchInput(e) {
 }
 
 function doCodeSearch(searchString) {
-  if (searchString.length === 0) searchResults = [];
+  if (!searchString) searchResults = [];
   else {
-    const regex = new RegExp(searchString, "i");
+    const regex = new RegExp(
+      "^" +
+        searchString
+          .split(" ")
+          .filter(keyword => keyword)
+          .map(keyword => `(?=.*${keyword})`)
+          .join("") +
+        ".+",
+      "gi"
+    );
 
     const serviceCodeResults = serviceCodes.filter(code => {
       if (
