@@ -12,6 +12,11 @@ const searchInput = document.getElementById("code-search-input");
 const resultList = document.querySelector(".search-result-list");
 const clearInputBtn = document.querySelector(".code-search-clear-btn");
 
+// Enable clearInputBtn animation after a delay to prevent playing on page load
+window.onload = () => {
+  setTimeout(() => clearInputBtn.classList.remove("preload"), 500);
+};
+
 searchInput.addEventListener("input", handleSearchInput);
 clearInputBtn.addEventListener("click", () => {
   searchInput.value = "";

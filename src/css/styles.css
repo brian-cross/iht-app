@@ -366,7 +366,6 @@ header.hidden {
 }
 
 .code-search-input-field-wrapper {
-  /* display: flex; */
   position: relative;
   width: 100%;
 }
@@ -403,6 +402,12 @@ header.hidden {
   animation-duration: 250ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+}
+
+/* Keep animation from playing on page load */
+.code-search-clear-btn.preload::before,
+.code-search-clear-btn.preload::after {
+  animation-duration: 0s;
 }
 
 .code-search-clear-btn.visible::before {
