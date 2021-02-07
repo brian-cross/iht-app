@@ -18,12 +18,7 @@ window.onload = () => {
 };
 
 searchInput.addEventListener("input", handleSearchInput);
-clearInputBtn.addEventListener("click", () => {
-  searchInput.value = "";
-  clearSearchResults();
-  hideInputClearButton();
-  searchInput.focus();
-});
+clearInputBtn.addEventListener("click", handleClearInputBtn);
 
 let searchResults = [];
 let inputDebounceId;
@@ -40,12 +35,13 @@ function handleSearchInput(e) {
     return;
   } else showInputClearButton();
 
-  inputDebounceId = setTimeout(
-    () => doCodeSearch(e.target.value),
-    inputDebounceInverval
-  );
+  inputDebounceId = setTimeout(() => {
+    const results = doCodeSearch(e.target.value);
+    renderSearchResults(results);
+  }, inputDebounceInverval);
 }
 
+// Searches the TBC and service codes arrays and returns an array of matches
 function doCodeSearch(searchString) {
   if (!searchString) searchResults = [];
   else {
@@ -76,9 +72,10 @@ function doCodeSearch(searchString) {
     searchResults = [...tbcCodeResults, ...serviceCodeResults];
   }
 
-  renderSearchResults(searchResults);
+  return searchResults;
 }
 
+// Renders the search results array to the DOM
 function renderSearchResults(searchResults) {
   clearSearchResults();
 
@@ -105,6 +102,15 @@ function renderSearchResults(searchResults) {
     .forEach(result => resultList.appendChild(result));
 }
 
+// Clears the input field and search results
+function handleClearInputBtn() {
+  searchInput.value = "";
+  clearSearchResults();
+  hideInputClearButton();
+  searchInput.focus();
+}
+
+// Utility functions
 function clearSearchResults() {
   while (resultList.firstChild) resultList.removeChild(resultList.firstChild);
 }
