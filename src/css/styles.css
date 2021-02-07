@@ -64,6 +64,7 @@
   --primary: var(--weekday-shift);
   --darkest: hsl(202, 33%, 16%);
   --stat-marker: var(--burnt-sienna);
+  --warning: hsl(10, 75%, 40%);
 }
 
 .theme-marty {
@@ -399,7 +400,7 @@ header.hidden {
   width: 2em;
   height: 0.2em;
   background-color: #666;
-  animation-duration: 125ms;
+  animation-duration: 300ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -430,7 +431,7 @@ header.hidden {
   0% {
     transform: scaleX(0) rotate(0);
   }
-  50% {
+  33% {
     transform: scaleX(1) rotate(0);
   }
   100% {
@@ -442,7 +443,7 @@ header.hidden {
   0% {
     transform: scaleX(1) rotate(45deg);
   }
-  50% {
+  66% {
     transform: scaleX(1) rotate(0);
   }
   100% {
@@ -454,7 +455,7 @@ header.hidden {
   0% {
     transform: scaleX(0) rotate(0);
   }
-  50% {
+  33% {
     transform: scaleX(1) rotate(0);
   }
   100% {
@@ -466,7 +467,7 @@ header.hidden {
   0% {
     transform: scaleX(1) rotate(-45deg);
   }
-  50% {
+  66% {
     transform: scaleX(1) rotate(0);
   }
   100% {
@@ -486,9 +487,13 @@ header.hidden {
 }
 
 .no-search-results {
+  color: var(--white);
+  background-color: var(--warning);
+}
+
+.no-search-results h2 {
   text-align: center;
-  font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   width: 100%;
 }
 

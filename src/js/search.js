@@ -33,7 +33,7 @@ function handleSearchInput(e) {
     hideInputClearButton();
     clearSearchResults();
     return;
-  } else showInputClearButton();
+  }
 
   inputDebounceId = setTimeout(() => {
     const results = doCodeSearch(e.target.value);
@@ -83,35 +83,34 @@ function renderSearchResults(searchResults) {
     console.log("No results");
     const noResults = document.createElement("li");
     noResults.classList.add("search-result-item");
-    noResults.innerHTML = `
-    <div class="search-result-item-header">
-      <h2 class="no-search-results">No result found</h2>
-    </div>`;
+    noResults.classList.add("no-search-results");
+    noResults.innerHTML = `<h2 class="">No result found</h2>`;
     resultList.appendChild(noResults);
-    return;
+  } else {
+    searchResults
+      .map(result => {
+        const listItem = document.createElement("li");
+
+        listItem.classList.add("search-result-item");
+        listItem.classList.add(result.rate ? "tbc-code" : "service-code");
+
+        listItem.innerHTML = `
+        <div class="search-result-item-header">
+          <h2 class="code-number">${result.code}</h2>
+          <h3 class="code-rate">${result.rate ? result.rate : ""}</h3>
+        </div>
+        <h3 class="code-title">${result.title}</h3>
+        <p class="code-description">${
+          result.description ? result.description : ""
+        }</p>
+      `;
+
+        return listItem;
+      })
+      .forEach(result => resultList.appendChild(result));
   }
 
-  searchResults
-    .map(result => {
-      const listItem = document.createElement("li");
-
-      listItem.classList.add("search-result-item");
-      listItem.classList.add(result.rate ? "tbc-code" : "service-code");
-
-      listItem.innerHTML = `
-      <div class="search-result-item-header">
-        <h2 class="code-number">${result.code}</h2>
-        <h3 class="code-rate">${result.rate ? result.rate : ""}</h3>
-      </div>
-      <h3 class="code-title">${result.title}</h3>
-      <p class="code-description">${
-        result.description ? result.description : ""
-      }</p>
-    `;
-
-      return listItem;
-    })
-    .forEach(result => resultList.appendChild(result));
+  showInputClearButton();
 }
 
 // Clears the input field and search results
