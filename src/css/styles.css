@@ -399,7 +399,7 @@ header.hidden {
   width: 2em;
   height: 0.2em;
   background-color: #666;
-  animation-duration: 250ms;
+  animation-duration: 125ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -483,6 +483,13 @@ header.hidden {
   padding: 1rem 3rem;
   border: 1px solid var(--dark);
   border-top: none;
+}
+
+.no-search-results {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .search-result-item::before {

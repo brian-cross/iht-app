@@ -75,9 +75,21 @@ function doCodeSearch(searchString) {
   return searchResults;
 }
 
-// Renders the search results array to the DOM
+// Renders the search results array to the DOM or a message if none found.
 function renderSearchResults(searchResults) {
   clearSearchResults();
+
+  if (searchResults.length === 0 && searchInput.value.length > 0) {
+    console.log("No results");
+    const noResults = document.createElement("li");
+    noResults.classList.add("search-result-item");
+    noResults.innerHTML = `
+    <div class="search-result-item-header">
+      <h2 class="no-search-results">No result found</h2>
+    </div>`;
+    resultList.appendChild(noResults);
+    return;
+  }
 
   searchResults
     .map(result => {
