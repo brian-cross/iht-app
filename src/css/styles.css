@@ -81,7 +81,6 @@
 
 html,
 body {
-  overflow-x: hidden;
   height: 100%;
 }
 
@@ -97,6 +96,7 @@ ul {
 body {
   font-family: var(--font-family-main);
   background: var(--background);
+  overflow-x: hidden;
 }
 
 li {
@@ -441,13 +441,10 @@ header.hidden {
 
 @keyframes hide-clr-btn-1 {
   0% {
-    transform: scaleX(1) rotate(45deg);
+    transform: scale(1) rotate(45deg);
   }
   66% {
-    transform: scaleX(1) rotate(0);
-  }
-  100% {
-    transform: scaleX(0) rotate(0);
+    transform: scale(0) rotate(45deg);
   }
 }
 
@@ -465,13 +462,10 @@ header.hidden {
 
 @keyframes hide-clr-btn-2 {
   0% {
-    transform: scaleX(1) rotate(-45deg);
+    transform: scale(1) rotate(-45deg);
   }
   66% {
-    transform: scaleX(1) rotate(0);
-  }
-  100% {
-    transform: scaleX(0) rotate(0);
+    transform: scale(0) rotate(-45deg);
   }
 }
 
