@@ -1,4 +1,4 @@
-import { handleMenuOpenClose } from "./index";
+import { handleMenuOpenClose } from "./menu";
 import { createDiv } from "./dom";
 import getHolidays from "./holidays";
 import months from "./months";
