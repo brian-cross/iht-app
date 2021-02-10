@@ -80,7 +80,6 @@ function renderSearchResults(searchResults) {
   clearSearchResults();
 
   if (searchResults.length === 0 && searchInput.value.length > 0) {
-    console.log("No results");
     const noResults = document.createElement("li");
     noResults.classList.add("search-result-item");
     noResults.classList.add("no-search-results");
@@ -109,6 +108,8 @@ function renderSearchResults(searchResults) {
       })
       .forEach(result => resultList.appendChild(result));
   }
+
+  console.log(searchResults.length);
 
   showInputClearButton();
 }
